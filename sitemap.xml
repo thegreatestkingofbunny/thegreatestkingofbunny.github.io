@@ -2,44 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/2018/04/20/lesson3/</loc>
-    
-    <lastmod>2018-04-20T01:25:30.432Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/2018/04/20/lesson6/</loc>
     
-    <lastmod>2018-04-19T13:28:20.899Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2018/04/20/lesson1-introduction/</loc>
-    
-    <lastmod>2018-04-19T13:27:54.934Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2018/04/20/lesson4/</loc>
-    
-    <lastmod>2018-04-19T13:24:06.466Z</lastmod>
+    <lastmod>2018-04-20T01:58:17.454Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/2018/04/20/lesson5/</loc>
     
-    <lastmod>2018-04-19T13:07:29.381Z</lastmod>
+    <lastmod>2018-04-20T01:58:01.714Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2018/04/20/lesson4/</loc>
+    
+    <lastmod>2018-04-20T01:57:41.221Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2018/04/20/lesson3/</loc>
+    
+    <lastmod>2018-04-20T01:57:25.237Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2018/04/20/lesson1-introduction/</loc>
+    
+    <lastmod>2018-04-20T01:56:52.375Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/2018/04/16/hello-world/</loc>
     
-    <lastmod>2017-10-28T00:39:58.000Z</lastmod>
+    <lastmod>2018-04-20T01:56:26.821Z</lastmod>
     
   </url>
   
