@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html>
+    <!-- title -->
+
+
+
+
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
+    <meta name="description" content="">
+    <title>Guo Shuyin&#39;s Studio</title>
+    <style type="text/css">
+    @font-face {
+        font-family: 'Oswald-Regular';
+        src: url("/font/Oswald-Regular.ttf");
+    }
+
+    body {
+        margin: 0;
+    }
+
+    header,
+    footer,
+    .back-top,
+    .sidebar,
+    .container,
+    .site-intro-meta,
+    .toc-wrapper {
+        display: none;
+    }
+
+    .site-intro {
+        position: relative;
+        z-index: 3;
+        width: 100%;
+        /* height: 50vh; */
+        overflow: hidden;
+    }
+
+    .site-intro-placeholder {
+        position: absolute;
+        z-index: -2;
+        top: 0;
+        left: 0;
+        width: calc(100% + 300px);
+        height: 100%;
+        background: repeating-linear-gradient(-45deg, #444 0, #444 80px, #333 80px, #333 160px);
+        background-position: center center;
+        transform: translate3d(-226px, 0, 0);
+        animation: gradient-move 2.5s ease-out 0s 1;
+    }
+
+    @keyframes gradient-move {
+        0% {
+            transform: translate3d(-226px, 0, 0);
+        }
+        100% {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+</style>
+
+    <link rel="preload" href= /css/style.css?v=20180317 as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" type="text/css" href= /css/mobile.css?v=20180317 media="(max-width: 980px)"/>
+    
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        
+    <link rel="icon" href= /assets/favicon.ico>
+    <script>
+        (function (w) {
+            "use strict";
+            // rel=preload support test
+            if (!w.loadCSS) {
+                w.loadCSS = function () { };
+            }
+            // define on the loadCSS obj
+            var rp = loadCSS.relpreload = {};
+            // rel=preload feature support test
+            // runs once and returns a function for compat purposes
+            rp.support = (function () {
+                var ret;
+                try {
+                    ret = w.document.createElement("link").relList.supports("preload");
+                } catch (e) {
+                    ret = false;
+                }
+                return function () {
+                    return ret;
+                };
+            })();
+
+            // if preload isn't supported, get an asynchronous load by using a non-matching media attribute
+            // then change that media back to its intended value on load
+            rp.bindMediaToggle = function (link) {
+                // remember existing media attr for ultimate state, or default to 'all'
+                var finalMedia = link.media || "all";
+
+                function enableStylesheet() {
+                    link.media = finalMedia;
+                }
+
+                // bind load handlers to enable media
+                if (link.addEventListener) {
+                    link.addEventListener("load", enableStylesheet);
+                } else if (link.attachEvent) {
+                    link.attachEvent("onload", enableStylesheet);
+                }
+
+                // Set rel and non-applicable media type to start an async request
+                // note: timeout allows this to happen async to let rendering continue in IE
+                setTimeout(function () {
+                    link.rel = "stylesheet";
+                    link.media = "only x";
+                });
+                // also enable media after 3 seconds,
+                // which will catch very old browsers (android 2.x, old firefox) that don't support onload on link
+                setTimeout(enableStylesheet, 3000);
+            };
+
+            // loop through link elements in DOM
+            rp.poly = function () {
+                // double check this to prevent external calls from running
+                if (rp.support()) {
+                    return;
+                }
+                var links = w.document.getElementsByTagName("link");
+                for (var i = 0; i < links.length; i++) {
+                    var link = links[i];
+                    // qualify links to those with rel=preload and as=style attrs
+                    if (link.rel === "preload" && link.getAttribute("as") === "style" && !link.getAttribute("data-loadcss")) {
+                        // prevent rerunning on link
+                        link.setAttribute("data-loadcss", true);
+                        // bind listeners to toggle media back
+                        rp.bindMediaToggle(link);
+                    }
+                }
+            };
+
+            // if unsupported, run the polyfill
+            if (!rp.support()) {
+                // run once at least
+                rp.poly();
+
+                // rerun poly on an interval until onload
+                var run = w.setInterval(rp.poly, 500);
+                if (w.addEventListener) {
+                    w.addEventListener("load", function () {
+                        rp.poly();
+                        w.clearInterval(run);
+                    });
+                } else if (w.attachEvent) {
+                    w.attachEvent("onload", function () {
+                        rp.poly();
+                        w.clearInterval(run);
+                    });
+                }
+            }
+            // commonjs
+            if (typeof exports !== "undefined") {
+                exports.loadCSS = loadCSS;
+            }
+            else {
+                w.loadCSS = loadCSS;
+            }
+        }(typeof global !== "undefined" ? global : this));
+    </script>
+    <script src="//cdn.staticfile.org/jquery/3.2.1/jquery.min.js" defer></script>
+    <script src="/scripts/main.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" defer></script>
+    <!-- 百度统计  -->
+    
+    <!-- 谷歌统计  -->
+    
+</head>
+
+    
+        <body class="post-body">
+    
+    
+<header class="header">
+
+    <div class="read-progress"></div>
+    <div class="header-sidebar-menu">&#xe775;</div>
+    <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >Guo Shuyin&#39;s Studio.</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name"></a>
+            </div>
+    </div>
+    
+    <a class="home-link" href=/>Guo Shuyin's Studio.</a>
+</header>
+    <div class="wrapper">
+        <div class="site-intro" style=
+
+
+
+
+
+
+
+
+height:50vh;
+
+>
+    
+    <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
+            
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
+    <div class="site-intro-placeholder"></div>
+    <div class="site-intro-meta">
+        <!-- 标题  -->
+        <h1 class="intro-title">
+            <!-- 主页  -->
+            
+            [Untitled Post]
+            <!-- 404 -->
+            
+        </h1>
+        <!-- 副标题 -->
+        <p class="intro-subtitle">
+            <!-- 主页副标题  -->
+            
+            
+            <!-- 404 -->
+            
+        </p>
+        <!-- 文章页meta -->
+        
+            <!-- 文章页标签  -->
+            
+            <div class="post-intro-meta">
+                <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                <span class="post-intro-time">2018/04/20</span>
+                
+                <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                    <span class="iconfont-archer">&#xe602;</span>
+                    <span id="busuanzi_value_page_pv"></span>
+                </span>
+                
+                <span class="shareWrapper">
+                    <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                    <span class="shareText">Share</span>
+                    <ul class="shareList">
+                        <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                            <div class="share-qrcode"></div>
+                        </li>
+                        <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                        <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                        <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                        <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                    </ul>
+                </span>
+            </div>
+        
+    </div>
+</div>
+        <script>
+  // load webfont-loader async, and add callback function
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+  
+  // get user agent
+  var browser = {
+    versions: function () {
+      var u = window.navigator.userAgent;
+      return {
+        userAgent: u,
+        trident: u.indexOf('Trident') > -1, //IE内核
+        presto: u.indexOf('Presto') > -1, //opera内核
+        webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+        gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+        mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+        ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+        android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+        iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者安卓QQ浏览器
+        iPad: u.indexOf('iPad') > -1, //是否为iPad
+        webApp: u.indexOf('Safari') == -1, //是否为web应用程序，没有头部与底部
+        weixin: u.indexOf('MicroMessenger') == -1, //是否为微信浏览器
+        uc: u.indexOf('UCBrowser') > -1 //是否为android下的UC浏览器
+      };
+    }()
+  }
+  console.log("userAgent:" + browser.versions.userAgent);
+
+  // callback
+  function fontLoaded() {
+    console.log('font loaded');
+    if (document.getElementsByClassName('site-intro-meta')) {
+      document.getElementsByClassName('intro-title')[0].classList.add('intro-fade-in');
+      document.getElementsByClassName('intro-subtitle')[0].classList.add('intro-fade-in');
+      var postIntroTags = document.getElementsByClassName('post-intro-tags')[0],
+        postIntroMeat = document.getElementsByClassName('post-intro-meta')[0];
+      if (postIntroTags) {
+        postIntroTags.classList.add('post-fade-in');
+      }
+      if (postIntroMeat) {
+        postIntroMeat.classList.add('post-fade-in');
+      }
+    }
+  }
+
+  // UC不支持跨域，所以直接显示
+  function asyncCb(){
+    if (browser.versions.uc) {
+      console.log("UCBrowser");
+      fontLoaded();
+    } else {
+      WebFont.load({
+        custom: {
+          families: ['Oswald-Regular']
+        },
+        loading: function () {  //所有字体开始加载
+          // console.log('loading');
+        },
+        active: function () {  //所有字体已渲染
+          fontLoaded();
+        },
+        inactive: function () { //字体预加载失败，无效字体或浏览器不支持加载
+          console.log('inactive: timeout');
+          fontLoaded();
+        },
+        timeout: 5000 // Set the timeout to two seconds
+      });
+    }
+  }
+
+  async("https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js", asyncCb)
+</script>        
+        <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
+        <div class="container container-unloaded">
+            <main class="main post-page">
+    <article class="article-entry">
+        <hr>
+<h2 id="title：-第五讲-民国初年的政治"><a href="#title：-第五讲-民国初年的政治" class="headerlink" title="title： 第五讲 民国初年的政治"></a>title： 第五讲 民国初年的政治</h2><p><img src="https://raw.githubusercontent.com/thegreatestkingofbunny/photo/master/lesson5%EF%BC%881%EF%BC%89.jpg" alt=""></p>
+<h1 id="一、中华民国的建立"><a href="#一、中华民国的建立" class="headerlink" title="一、中华民国的建立"></a>一、中华民国的建立</h1><p>##1.《临时政府组织法大纲》 </p>
+<h3 id="革命之后如何建立政权？"><a href="#革命之后如何建立政权？" class="headerlink" title="革命之后如何建立政权？"></a>革命之后如何建立政权？</h3><p>各省代表在武昌组成“各省都督代表联合会”，通过《临时政府组织法大纲》</p>
+<p>以<strong>宪法性文件</strong> 确认新政权的合法性</p>
+<ul>
+<li>采用西方以宪法、国会、总统为支柱的资产阶级政治制度→<strong>国体</strong> </li>
+<li>规定临时政府的行政建制为总统制，<strong>总统</strong> 由各省都督府的代表选举产生→<strong>南京临时政府</strong> </li>
+<li>设立<strong>参议院</strong> 为立法机关，发挥国会作用→<strong>南京临时参议院</strong> </li>
+</ul>
+<h3 id="2-中华民国临时政府成立"><a href="#2-中华民国临时政府成立" class="headerlink" title="2.中华民国临时政府成立"></a>2.中华民国临时政府成立</h3><ul>
+<li>1911年12.29，各省代表在南京选举临时大总统，孙中山先生当选；</li>
+<li>1912.1.1，孙中山就任大总统，发布《临时大总统宣言书》《告全国同胞书》等文件，正式宣布中华民国的诞生；</li>
+<li>中华民国为资产阶级民主共和国，政权组织形式采取总统制。</li>
+</ul>
+<blockquote>
+<p>倾覆满洲专制政府，巩固中华民国，图谋民生幸福，此国民之公意，文实遵之，以忠于国，为众服务。至专制政府既倒，国内无变乱，民国卓立于世界，为列邦公认，斯时文当解临时大总统之职，谨以此誓于国民。——《大总统誓词》</p>
+</blockquote>
+<p><em>总统制与内阁制</em> </p>
+<ul>
+<li>资产阶级民主制度下存在两种政体：君主立宪与民主共和</li>
+<li>民主共和体制之下，具体的政权组织形式有总统制与内阁制之分<ul>
+<li><em>总统制下，或直接或间接选出的总统既是国家元首，同时兼任政府首脑，拥有较大的权力</em> 。</li>
+<li><em>内阁制下，总统是作为国家象征的元首，权力相对较小；政府由议会多数党或政党联盟组成，总理及其任命的内阁掌握行政权，对议会负责。</em> </li>
+</ul>
+</li>
+</ul>
+<h2 id="3-南京临时参议院成立"><a href="#3-南京临时参议院成立" class="headerlink" title="3.南京临时参议院成立"></a>3.南京临时参议院成立</h2><ul>
+<li>宣布“独立”17省以每省3人为限，组成临时参议院，在国会成立之前，代行“中华民国之立法权”</li>
+<li>1912年1.28，南京临时参议院正式成立，会议推举同盟会会员林森为参议院院长</li>
+</ul>
+<h2 id="4-民国的国歌与国旗"><a href="#4-民国的国歌与国旗" class="headerlink" title="4.民国的国歌与国旗"></a>4.民国的国歌与国旗</h2><p>国旗：</p>
+<ul>
+<li>临时参议院决定以红黄蓝白黑五色旗为中华民国国旗，象征五族共和</li>
+<li>十八星旗为陆军旗，青天白日旗为海军旗</li>
+</ul>
+<p>国歌：</p>
+<ul>
+<li><p>1896，李鸿章作为外交特使赴西欧和俄罗斯作礼节性访问，应急之下，清政府临时制作一首“国歌”，即“李中堂乐”</p>
+</li>
+<li><p>1911.10.4，清廷颁布由严复作曲、傅侗作词、郭曾炘修订的国歌《巩金瓯》</p>
+</li>
+<li><p>1912.2，南京临时政府公布了由沈恩孚作词、沈彭年谱曲的中华民国国歌</p>
+<blockquote>
+<p>揖美追欧，旧邦新造</p>
+</blockquote>
+</li>
+</ul>
+<h1 id="二、民主共和政治的尝试"><a href="#二、民主共和政治的尝试" class="headerlink" title="二、民主共和政治的尝试"></a>二、民主共和政治的尝试</h1><h2 id="1-立法机构与立法活动"><a href="#1-立法机构与立法活动" class="headerlink" title="1.立法机构与立法活动"></a>1.立法机构与立法活动</h2><h3 id="中华民国临时约法"><a href="#中华民国临时约法" class="headerlink" title="中华民国临时约法"></a>中华民国临时约法</h3><ul>
+<li><p>1912.3.11，南京临时参议院通过了《中华民国临时约法》。</p>
+<p><strong>《中华民国临时约法》是中国历史上第一部具有资产阶级共和国宪法性质的法典。</strong></p>
+<p><strong>以根本大法的形式废除了中国两千年来的封建君主专制制度，确认了资产阶级民主共和国的政治制度。</strong> </p>
+<blockquote>
+<ul>
+<li>中华民国之主权，属于国民全体。<strong>强调国家主权及其归属</strong> </li>
+<li>全国人民一律平等，都有人身、财产、营业、言论、出版、集会、结社、通信、居住迁徙、信仰的自由，均能接受情愿、陈诉、考试、选举和被选举等民主权利。 <strong>第一次规定了公民权利</strong> </li>
+<li>以参议院（立法）、临时大总统（国家元首）、国务员（行政机构）、法院（司法）共同行使国家统治权，由此确立了行政、立法和司法三权分立的原则。 <strong>以分权限制个人专权</strong> </li>
+<li>政权的组织形式改为内阁制，那个直接向国会负责，全体国务员与内阁总理组成行政机关，行使行政职权。<strong>由总统制向内阁制的转变</strong> </li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<h3 id="北京临时参议院"><a href="#北京临时参议院" class="headerlink" title="北京临时参议院"></a>北京临时参议院</h3><ul>
+<li>袁世凯在北京就任大总统后，临时参议院迁至北京，是为北京临时参议院。</li>
+<li>根据《中华民国国会组织法》等法律，1912年底至1913年初，国会选举举行（只有1%国民投票）<ul>
+<li>具选民资格者占比少</li>
+<li>参加投票者少</li>
+<li>选民与议员之间并未有牢固的代表与被代表的关系</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-政党政治的初现"><a href="#2-政党政治的初现" class="headerlink" title="2.政党政治的初现"></a>2.政党政治的初现</h2><ul>
+<li>1912.3.3，同盟会南京召开本部全体大会，正式宣布同盟会改组为公开的政党。举苏宁中山为总理，黄兴、黎元洪为协理。8.25，同盟会又与四党合并，正式成立<strong>国民党</strong> 。</li>
+<li>1913.5，共和党、民主党 、统一党联合组成<strong>进步党</strong> ，黎元洪为党魁，实际党务由梁启超负责。</li>
+</ul>
+<p><strong>至此，民国初年各派政治势力的重新分化组成大体完成，形成了国民、进步两党对峙的形势</strong> </p>
+<p><strong>其中难见明确的政党政纲，政党缺乏群众基础</strong> </p>
+<h2 id="3-内阁制的艰难起步"><a href="#3-内阁制的艰难起步" class="headerlink" title="3.内阁制的艰难起步"></a>3.内阁制的艰难起步</h2><ul>
+<li><p>内阁成员的人选之争</p>
+<p>唐绍仪力图依照各国责任内阁制的通例，所有国家重大决策均取决于那个，结果是国务院权力渐大，总统府权力渐小；</p>
+<p>袁世凯力图打破内阁制约束，把控实权</p>
+</li>
+<li><p>唐绍仪之后，袁世凯提议陆征祥任内阁总理，但陆内阁的新内阁成员无法在参议院通过，后被免职</p>
+<p>​</p>
+</li>
+</ul>
+<h1 id="三、北洋军阀统治的形成"><a href="#三、北洋军阀统治的形成" class="headerlink" title="三、北洋军阀统治的形成"></a>三、北洋军阀统治的形成</h1><h2 id="1-袁世凯就任临时大总统"><a href="#1-袁世凯就任临时大总统" class="headerlink" title="1.袁世凯就任临时大总统"></a>1.袁世凯就任临时大总统</h2><p>1912.3.10袁世凯在北京就任中华民国临时大总统，民国的政治中心由南京而北京</p>
+<ul>
+<li>依照《中华民国临时约法》，袁世凯所任为内阁制之下的大总统。袁世凯无心依法行事，民主共和制渐渐被破坏。</li>
+<li>北洋军阀统治局面逐渐形成。</li>
+</ul>
+<h2 id="2-民主共和制度的夭亡"><a href="#2-民主共和制度的夭亡" class="headerlink" title="2.民主共和制度的夭亡"></a>2.民主共和制度的夭亡</h2><h3 id="政党政治的终结"><a href="#政党政治的终结" class="headerlink" title="政党政治的终结"></a>政党政治的终结</h3><ul>
+<li>1912底的国会选举中，国民党大获全胜</li>
+<li>宋教仁希望组织以他为首的责任内阁，推行资产阶级议会民主制度。</li>
+<li>1913.3.20，宋教仁被杀→<em>说明北洋统治的专制与黑暗，借此，袁世凯破坏共和制度。</em> </li>
+<li>1913.7，革命党发动了“二次革命”，举起了武力反袁的旗帜</li>
+<li>1913.11，袁世凯解散国民党，通缉孙中山等人，黄兴等被列为“乱党”首领，政党政治不复存在。</li>
+</ul>
+<h3 id="解散国会与重订”约法“"><a href="#解散国会与重订”约法“" class="headerlink" title="解散国会与重订”约法“"></a>解散国会与重订”约法“</h3><ul>
+<li><p>1913.4，第一届国会开幕</p>
+<p>国会通过了《总统选举发》；后受胁迫，国会选举袁世凯为大总统</p>
+</li>
+<li><p>1913.11，袁世凯下令解散国民党，使国会失去开议法定人数而自动停摆</p>
+</li>
+<li><p>1914.1，下令解散<strong>国会</strong> ，代之以<strong>”“政治会议”</strong> </p>
+</li>
+<li><p>1914.5，袁氏御用的“<strong>约法会议</strong> “制定《中华民国约法》代替《约法》</p>
+</li>
+<li><p>北洋时期的内阁沦为袁世凯的傀儡</p>
+</li>
+</ul>
+<h3 id="内阁制遭到破坏"><a href="#内阁制遭到破坏" class="headerlink" title="内阁制遭到破坏"></a>内阁制遭到破坏</h3><ul>
+<li>《中华民国约法》扩大总统权力，改<strong>内阁制</strong> 为<strong>总统制</strong> 。</li>
+<li>《修正大总统选举法》规定，总统任期十年，得连任；新总统由现任大总统推举。</li>
+<li>自此，北洋政府中的<strong>总统</strong> 均有实力派军阀担任，内阁<strong>总理</strong> 在政府运行中居于从属地位。</li>
+<li>北洋时期的总统制其实是一种披着现代政治外衣的军阀统治。</li>
+</ul>
+<p><strong>作为民主共和制度的要素——政党政治、国会立法、内阁行政等都遭到袁世凯的破坏。</strong> </p>
+<h3 id="洪宪帝制"><a href="#洪宪帝制" class="headerlink" title="洪宪帝制"></a>洪宪帝制</h3><ul>
+<li>袁世凯镇压二次革命后，北洋派占据了绝对优势，民初政治力量的平衡已不复存在</li>
+<li>1915.12.12袁世凯发表接受帝位申令，次日接受百官朝贺，准备在1916年元旦登基称帝<ul>
+<li>梁启超撰《异哉所谓国体问题者》</li>
+<li>蔡锷组织讨袁护国军</li>
+<li>北洋派段祺瑞、冯国璋等人反对帝制</li>
+</ul>
+</li>
+<li>后袁世凯被迫取消帝制</li>
+</ul>
+<h2 id="3-封建军阀统治的形成"><a href="#3-封建军阀统治的形成" class="headerlink" title="3.封建军阀统治的形成"></a>3.封建军阀统治的形成</h2><ul>
+<li>袁世凯破坏了民主共和体制，开始了北洋军阀封建统治；袁世凯身后名中国陷入了军阀割据混战局面<ul>
+<li>北洋军阀：多来自于袁世凯小站练兵时得旧人，后分为直系、皖系两支。</li>
+<li>西南军阀；多由辛亥革命后得都督演变而来，以滇、桂为主，也包括黔、川、粤、湘。滇系首领唐继尧、桂系首领陆荣廷。</li>
+</ul>
+</li>
+</ul>
+<p>军阀政治的恶果：</p>
+<ul>
+<li>军阀混战带来军队扩张、社会破坏、人民负担重</li>
+<li>军阀把持政治，造成中国政局动荡</li>
+<li>为列强操控中国政治、侵略中国经济以可乘之机</li>
+<li>尊孔复古思潮猖獗一时</li>
+</ul>
+<p><strong>民国具有复杂的历史面相，其战乱、动荡、萧条促使人们寻求新的社会转机</strong> </p>
+<h3 id="5-旧民主主义革命的终结"><a href="#5-旧民主主义革命的终结" class="headerlink" title="5.旧民主主义革命的终结"></a>5.旧民主主义革命的终结</h3><h3 id="革命党人的努力"><a href="#革命党人的努力" class="headerlink" title="革命党人的努力"></a>革命党人的努力</h3><ul>
+<li><p>1913年7月，孙中山发起武装反袁的“二次革命”</p>
+</li>
+<li><p>1915年12月，蔡锷举起护国旗帜，发起护国运动</p>
+</li>
+<li><p>1917年7月，孙中山联合西南军阀，组织护法运动</p>
+<p><strong>护法运动的失败，标志着中国民族资产阶级领导的旧民主主义革命的终结。</strong></p>
+<p>​</p>
+</li>
+</ul>
+<h3 id="辛亥革命的成与败【重点】"><a href="#辛亥革命的成与败【重点】" class="headerlink" title="辛亥革命的成与败【重点】"></a>辛亥革命的成与败【重点】</h3><ul>
+<li>打击了封建势力与帝国主义势力</li>
+<li>建立了资产阶级民主共和政府</li>
+<li>推动了社会变革与思想解放</li>
+<li>未能彻底解决反帝反封建的任务</li>
+</ul>
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><ul>
+<li>中华民国尝试以立法、行政、司法分权制衡的原则来建立资产阶级民主共和制度</li>
+<li>民国政治起步艰难，民主共和屡遭破坏，最终中国陷入封建军阀的统治之下</li>
+<li>旧民主主义革命终结了，一场思想文化领域的运动正在兴起</li>
+</ul>
+
+    </article>
+    <!-- 前后页  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+                <div class="nextSlogan">Next Post</div>
+                <a href= "/2018/04/20/lesson4/" title=  >
+                    <div class="nextTitle">[Untitled Post]</div>
+                </a>
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2018/04/20/lesson6/" title=  >
+                    <div class="prevTitle">[Untitled Post]</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
+    
+    
+    <!--PC版-->
+
+    <!--PC版-->
+
+
+    
+    <!-- 评论 -->
+</main>
+            <!-- profile -->
+            
+        </div>
+        <footer class="footer footer-unloaded">
+    <!-- social  -->
+    
+    <div class="social">
+        
+    
+        
+            
+                <a href="mailto:guoshuyin123@gmail.com" class="iconfont-archer email" title=email ></a>
+            
+        
+    
+        
+            
+                <a href="//github.com/thegreatestkingofbunny" class="iconfont-archer github" target="_blank" title=github></a>
+            
+        
+    
+        
+            
+                <span class="iconfont-archer wechat" title=wechat>
+                  
+                  <img class="profile-qr" src="/assets/example_qr.png" />
+                </span>
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+    </div>
+    
+    <!-- powered by Hexo  -->
+    <div class="copyright">
+        <span id="hexo-power">Powered by <a href="https://hexo.io/" target="_blank">Hexo</a></span><span class="iconfont-archer power">&#xe635;</span><span id="theme-info">theme <a href="https://github.com/fi3ework/hexo-theme-archer" target="_blank">Archer</a></span>
+    </div>
+    <!-- 不蒜子  -->
+    
+    <div class="busuanzi-container">
+        <span id="busuanzi_container_site_pv">PV: <span id="busuanzi_value_site_pv"></span>
+        </span>
+    </div>
+    
+</footer>
+    </div>
+    <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#title：-第五讲-民国初年的政治"><span class="toc-number">1.</span> <span class="toc-text">title： 第五讲 民国初年的政治</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#一、中华民国的建立"><span class="toc-number"></span> <span class="toc-text">一、中华民国的建立</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#革命之后如何建立政权？"><span class="toc-number">0.1.</span> <span class="toc-text">革命之后如何建立政权？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-中华民国临时政府成立"><span class="toc-number">0.2.</span> <span class="toc-text">2.中华民国临时政府成立</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-南京临时参议院成立"><span class="toc-number">1.</span> <span class="toc-text">3.南京临时参议院成立</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-民国的国歌与国旗"><span class="toc-number">2.</span> <span class="toc-text">4.民国的国歌与国旗</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二、民主共和政治的尝试"><span class="toc-number"></span> <span class="toc-text">二、民主共和政治的尝试</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-立法机构与立法活动"><span class="toc-number">1.</span> <span class="toc-text">1.立法机构与立法活动</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#中华民国临时约法"><span class="toc-number">1.1.</span> <span class="toc-text">中华民国临时约法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#北京临时参议院"><span class="toc-number">1.2.</span> <span class="toc-text">北京临时参议院</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-政党政治的初现"><span class="toc-number">2.</span> <span class="toc-text">2.政党政治的初现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-内阁制的艰难起步"><span class="toc-number">3.</span> <span class="toc-text">3.内阁制的艰难起步</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#三、北洋军阀统治的形成"><span class="toc-number"></span> <span class="toc-text">三、北洋军阀统治的形成</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-袁世凯就任临时大总统"><span class="toc-number">1.</span> <span class="toc-text">1.袁世凯就任临时大总统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-民主共和制度的夭亡"><span class="toc-number">2.</span> <span class="toc-text">2.民主共和制度的夭亡</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#政党政治的终结"><span class="toc-number">2.1.</span> <span class="toc-text">政党政治的终结</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解散国会与重订”约法“"><span class="toc-number">2.2.</span> <span class="toc-text">解散国会与重订”约法“</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#内阁制遭到破坏"><span class="toc-number">2.3.</span> <span class="toc-text">内阁制遭到破坏</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#洪宪帝制"><span class="toc-number">2.4.</span> <span class="toc-text">洪宪帝制</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-封建军阀统治的形成"><span class="toc-number">3.</span> <span class="toc-text">3.封建军阀统治的形成</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-旧民主主义革命的终结"><span class="toc-number">3.1.</span> <span class="toc-text">5.旧民主主义革命的终结</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#革命党人的努力"><span class="toc-number">3.2.</span> <span class="toc-text">革命党人的努力</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#辛亥革命的成与败【重点】"><span class="toc-number">3.3.</span> <span class="toc-text">辛亥革命的成与败【重点】</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#结语"><span class="toc-number"></span> <span class="toc-text">结语</span></a>
+    </div>
+    
+    <div class="back-top iconfont-archer">&#xe639;</div>
+    <div class="sidebar sidebar-hide">
+    <ul class="sidebar-tabs sidebar-tabs-active-0">
+        <li class="sidebar-tab-archives"><span class="iconfont-archer">&#xe67d;</span><span class="tab-name">Archive</span></li>
+        <li class="sidebar-tab-tags"><span class="iconfont-archer">&#xe61b;</span><span class="tab-name">Tag</span></li>
+        <li class="sidebar-tab-categories"><span class="iconfont-archer">&#xe666;</span><span class="tab-name">Cate</span></li>
+    </ul>
+    <div class="sidebar-content sidebar-content-show-archive">
+          <div class="sidebar-panel-archives">
+    <!-- 在ejs中将archive按照时间排序 -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 6 </div>
+    
+    <div class="post-archive">
+    
+    
+    
+    
+    <div class="archive-year"> 2018 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/20</span><a class="archive-post-title" href= "/2018/04/20/lesson6/" >[Untitled Post]</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/04/16/hello-world/" >Hello World</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/04/20/lesson5/" >[Untitled Post]</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> 2018 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/20</span><a class="archive-post-title" href= "/2018/04/20/lesson1-introduction/" >[Untitled Post]</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/20</span><a class="archive-post-title" href= "/2018/04/20/lesson4/" >[Untitled Post]</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/20</span><a class="archive-post-title" href= "/2018/04/20/lesson3/" >[Untitled Post]</a>
+        </li>
+    
+    </div>
+  </div>
+        <div class="sidebar-panel-tags">
+    <div class="sidebar-tags-name">
+    
+    </div>
+    <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
+    <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
+    缺失模块。<br/>
+    1、请确保node版本大于6.2<br/>
+    2、在博客根目录（注意不是archer根目录）执行以下命令：<br/>
+    <span style="color: #f75357; font-size: 1rem; line-height: 2rem;">npm i hexo-generator-json-content --save</span><br/>
+    3、在根目录_config.yml里添加配置：
+    <pre style="color: #787878; font-size: 0.6rem;">
+jsonContent:
+  meta: false
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: false
+    raw: false
+    content: false
+    slug: false
+    updated: false
+    comments: false
+    link: false
+    permalink: false
+    excerpt: false
+    categories: true
+    tags: true</pre>
+    </div> 
+    <div class="sidebar-tags-list"></div>
+</div>
+        <div class="sidebar-panel-categories">
+    <div class="sidebar-categories-name">
+    
+    </div>
+    <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>
+    <div class="sidebar-categories-list"></div>
+</div>
+    </div>
+</div> 
+    <script>
+    var siteMeta = {
+        root: '/',
+        author: '郭书音'
+    }
+</script>
+    <!-- busuanzi  -->
+    
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+    <!-- CNZZ  -->
+    
+    </div>
+    <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
+    
+    </body>
+</html>
+
+

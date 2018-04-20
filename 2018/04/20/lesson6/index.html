@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html>
+    <!-- title -->
+
+
+
+
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
+    <meta name="description" content="">
+    <title>Guo Shuyin&#39;s Studio</title>
+    <style type="text/css">
+    @font-face {
+        font-family: 'Oswald-Regular';
+        src: url("/font/Oswald-Regular.ttf");
+    }
+
+    body {
+        margin: 0;
+    }
+
+    header,
+    footer,
+    .back-top,
+    .sidebar,
+    .container,
+    .site-intro-meta,
+    .toc-wrapper {
+        display: none;
+    }
+
+    .site-intro {
+        position: relative;
+        z-index: 3;
+        width: 100%;
+        /* height: 50vh; */
+        overflow: hidden;
+    }
+
+    .site-intro-placeholder {
+        position: absolute;
+        z-index: -2;
+        top: 0;
+        left: 0;
+        width: calc(100% + 300px);
+        height: 100%;
+        background: repeating-linear-gradient(-45deg, #444 0, #444 80px, #333 80px, #333 160px);
+        background-position: center center;
+        transform: translate3d(-226px, 0, 0);
+        animation: gradient-move 2.5s ease-out 0s 1;
+    }
+
+    @keyframes gradient-move {
+        0% {
+            transform: translate3d(-226px, 0, 0);
+        }
+        100% {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+</style>
+
+    <link rel="preload" href= /css/style.css?v=20180317 as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" type="text/css" href= /css/mobile.css?v=20180317 media="(max-width: 980px)"/>
+    
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        
+    <link rel="icon" href= /assets/favicon.ico>
+    <script>
+        (function (w) {
+            "use strict";
+            // rel=preload support test
+            if (!w.loadCSS) {
+                w.loadCSS = function () { };
+            }
+            // define on the loadCSS obj
+            var rp = loadCSS.relpreload = {};
+            // rel=preload feature support test
+            // runs once and returns a function for compat purposes
+            rp.support = (function () {
+                var ret;
+                try {
+                    ret = w.document.createElement("link").relList.supports("preload");
+                } catch (e) {
+                    ret = false;
+                }
+                return function () {
+                    return ret;
+                };
+            })();
+
+            // if preload isn't supported, get an asynchronous load by using a non-matching media attribute
+            // then change that media back to its intended value on load
+            rp.bindMediaToggle = function (link) {
+                // remember existing media attr for ultimate state, or default to 'all'
+                var finalMedia = link.media || "all";
+
+                function enableStylesheet() {
+                    link.media = finalMedia;
+                }
+
+                // bind load handlers to enable media
+                if (link.addEventListener) {
+                    link.addEventListener("load", enableStylesheet);
+                } else if (link.attachEvent) {
+                    link.attachEvent("onload", enableStylesheet);
+                }
+
+                // Set rel and non-applicable media type to start an async request
+                // note: timeout allows this to happen async to let rendering continue in IE
+                setTimeout(function () {
+                    link.rel = "stylesheet";
+                    link.media = "only x";
+                });
+                // also enable media after 3 seconds,
+                // which will catch very old browsers (android 2.x, old firefox) that don't support onload on link
+                setTimeout(enableStylesheet, 3000);
+            };
+
+            // loop through link elements in DOM
+            rp.poly = function () {
+                // double check this to prevent external calls from running
+                if (rp.support()) {
+                    return;
+                }
+                var links = w.document.getElementsByTagName("link");
+                for (var i = 0; i < links.length; i++) {
+                    var link = links[i];
+                    // qualify links to those with rel=preload and as=style attrs
+                    if (link.rel === "preload" && link.getAttribute("as") === "style" && !link.getAttribute("data-loadcss")) {
+                        // prevent rerunning on link
+                        link.setAttribute("data-loadcss", true);
+                        // bind listeners to toggle media back
+                        rp.bindMediaToggle(link);
+                    }
+                }
+            };
+
+            // if unsupported, run the polyfill
+            if (!rp.support()) {
+                // run once at least
+                rp.poly();
+
+                // rerun poly on an interval until onload
+                var run = w.setInterval(rp.poly, 500);
+                if (w.addEventListener) {
+                    w.addEventListener("load", function () {
+                        rp.poly();
+                        w.clearInterval(run);
+                    });
+                } else if (w.attachEvent) {
+                    w.attachEvent("onload", function () {
+                        rp.poly();
+                        w.clearInterval(run);
+                    });
+                }
+            }
+            // commonjs
+            if (typeof exports !== "undefined") {
+                exports.loadCSS = loadCSS;
+            }
+            else {
+                w.loadCSS = loadCSS;
+            }
+        }(typeof global !== "undefined" ? global : this));
+    </script>
+    <script src="//cdn.staticfile.org/jquery/3.2.1/jquery.min.js" defer></script>
+    <script src="/scripts/main.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" defer></script>
+    <!-- 百度统计  -->
+    
+    <!-- 谷歌统计  -->
+    
+</head>
+
+    
+        <body class="post-body">
+    
+    
+<header class="header">
+
+    <div class="read-progress"></div>
+    <div class="header-sidebar-menu">&#xe775;</div>
+    <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >Guo Shuyin&#39;s Studio.</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name"></a>
+            </div>
+    </div>
+    
+    <a class="home-link" href=/>Guo Shuyin's Studio.</a>
+</header>
+    <div class="wrapper">
+        <div class="site-intro" style=
+
+
+
+
+
+
+
+
+height:50vh;
+
+>
+    
+    <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
+            
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
+    <div class="site-intro-placeholder"></div>
+    <div class="site-intro-meta">
+        <!-- 标题  -->
+        <h1 class="intro-title">
+            <!-- 主页  -->
+            
+            [Untitled Post]
+            <!-- 404 -->
+            
+        </h1>
+        <!-- 副标题 -->
+        <p class="intro-subtitle">
+            <!-- 主页副标题  -->
+            
+            
+            <!-- 404 -->
+            
+        </p>
+        <!-- 文章页meta -->
+        
+            <!-- 文章页标签  -->
+            
+            <div class="post-intro-meta">
+                <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                <span class="post-intro-time">2018/04/20</span>
+                
+                <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                    <span class="iconfont-archer">&#xe602;</span>
+                    <span id="busuanzi_value_page_pv"></span>
+                </span>
+                
+                <span class="shareWrapper">
+                    <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                    <span class="shareText">Share</span>
+                    <ul class="shareList">
+                        <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                            <div class="share-qrcode"></div>
+                        </li>
+                        <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                        <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                        <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                        <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                    </ul>
+                </span>
+            </div>
+        
+    </div>
+</div>
+        <script>
+  // load webfont-loader async, and add callback function
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+  
+  // get user agent
+  var browser = {
+    versions: function () {
+      var u = window.navigator.userAgent;
+      return {
+        userAgent: u,
+        trident: u.indexOf('Trident') > -1, //IE内核
+        presto: u.indexOf('Presto') > -1, //opera内核
+        webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+        gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+        mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+        ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+        android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+        iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者安卓QQ浏览器
+        iPad: u.indexOf('iPad') > -1, //是否为iPad
+        webApp: u.indexOf('Safari') == -1, //是否为web应用程序，没有头部与底部
+        weixin: u.indexOf('MicroMessenger') == -1, //是否为微信浏览器
+        uc: u.indexOf('UCBrowser') > -1 //是否为android下的UC浏览器
+      };
+    }()
+  }
+  console.log("userAgent:" + browser.versions.userAgent);
+
+  // callback
+  function fontLoaded() {
+    console.log('font loaded');
+    if (document.getElementsByClassName('site-intro-meta')) {
+      document.getElementsByClassName('intro-title')[0].classList.add('intro-fade-in');
+      document.getElementsByClassName('intro-subtitle')[0].classList.add('intro-fade-in');
+      var postIntroTags = document.getElementsByClassName('post-intro-tags')[0],
+        postIntroMeat = document.getElementsByClassName('post-intro-meta')[0];
+      if (postIntroTags) {
+        postIntroTags.classList.add('post-fade-in');
+      }
+      if (postIntroMeat) {
+        postIntroMeat.classList.add('post-fade-in');
+      }
+    }
+  }
+
+  // UC不支持跨域，所以直接显示
+  function asyncCb(){
+    if (browser.versions.uc) {
+      console.log("UCBrowser");
+      fontLoaded();
+    } else {
+      WebFont.load({
+        custom: {
+          families: ['Oswald-Regular']
+        },
+        loading: function () {  //所有字体开始加载
+          // console.log('loading');
+        },
+        active: function () {  //所有字体已渲染
+          fontLoaded();
+        },
+        inactive: function () { //字体预加载失败，无效字体或浏览器不支持加载
+          console.log('inactive: timeout');
+          fontLoaded();
+        },
+        timeout: 5000 // Set the timeout to two seconds
+      });
+    }
+  }
+
+  async("https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js", asyncCb)
+</script>        
+        <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
+        <div class="container container-unloaded">
+            <main class="main post-page">
+    <article class="article-entry">
+        <hr>
+<h2 id="title：-第六讲-马克思主义传播与中国共产党诞生"><a href="#title：-第六讲-马克思主义传播与中国共产党诞生" class="headerlink" title="title： 第六讲 马克思主义传播与中国共产党诞生"></a>title： 第六讲 马克思主义传播与中国共产党诞生</h2><h1 id="一、新文化运动的兴起【重要】"><a href="#一、新文化运动的兴起【重要】" class="headerlink" title="一、新文化运动的兴起【重要】"></a>一、新文化运动的兴起【重要】</h1><blockquote>
+<ul>
+<li>所谓立宪整体，所谓国民政治，果能实现与否，纯然以多数国民对于政治，自觉其居于主人的主动的地位为<strong>唯一根本之条件</strong> 。自居于主人的主动的地位，则应自进而建设政府，自立法度而自服从之，自定权利而尊重之。</li>
+<li>吾敢断言曰：<strong>伦理的觉悟</strong> ，为吾人最后觉悟之最后觉悟。——陈独秀《吾人最后之觉悟》</li>
+</ul>
+</blockquote>
+<p>立宪政体→多数国民之自觉→<strong>伦理的觉悟</strong> ：思想启蒙、文化觉醒、观念更新</p>
+<h2 id="1-新文化运动的兴起"><a href="#1-新文化运动的兴起" class="headerlink" title="1.新文化运动的兴起"></a>1.新文化运动的兴起</h2><h3 id="关于辛亥革命失败的思考"><a href="#关于辛亥革命失败的思考" class="headerlink" title="关于辛亥革命失败的思考"></a>关于辛亥革命失败的思考</h3><ul>
+<li>陈独秀认为，立宪政体之实现、多数国民之自觉，需要通过思想启蒙来完成“伦理的觉悟”</li>
+<li>鲁迅提出“国民性”改造问题</li>
+<li>孙中山思考着“心理建设”的命题</li>
+</ul>
+<p>正是在对辛亥革命失败原因的痛苦反思中，产生了<strong>“更新文化价值观念以改造国民性”</strong> 的新文化运动</p>
+<h3 id="关于学习西方命题的思考"><a href="#关于学习西方命题的思考" class="headerlink" title="关于学习西方命题的思考"></a>关于学习西方命题的思考</h3><blockquote>
+<p>革命成功将近十年，所有希望的件件都落空了，渐渐有点废然思返，觉得社会变化是整套的，要拿<strong>旧心理</strong> 运用<strong>新制度</strong> ，决计不可能，渐渐要求<strong>全人格的觉醒</strong> 。——梁启超</p>
+</blockquote>
+<p>师夷：器物层面（1860后）→制度层面（1895前后）→观念层面（1915前后）</p>
+<p><em>与西方观念发展方向相反</em> </p>
+<p>###《新青年》创办 </p>
+<ul>
+<li><p>1915年夏天，陈独秀在上海创办《青年杂志》</p>
+<p>在陈独秀看来，中国的民主革命缺少像西方曾经历的、从意大利文艺复兴到法国启蒙运动的历史阶段，新文化运动的发起即有补课之意。<strong>还是揖美追欧</strong> </p>
+</li>
+<li><p>陈独秀受邀担任北京大学文科学长，主张<strong>新思想、新文化</strong> 的《新青年》移师于提倡<strong>新教育、新学风</strong> 的北大。</p>
+</li>
+<li>以《新青年》为主阵地、以北京大学为摇篮，新文化运动得到有力推进。<h2 id="2-民主与科学"><a href="#2-民主与科学" class="headerlink" title="2.民主与科学"></a>2.民主与科学</h2></li>
+</ul>
+<h3 id="提倡民主与科学，为什么要“排孔”"><a href="#提倡民主与科学，为什么要“排孔”" class="headerlink" title="提倡民主与科学，为什么要“排孔”"></a>提倡民主与科学，为什么要“排孔”</h3><ol>
+<li><p>孔子是封建纲常的招牌</p>
+<blockquote>
+<p>“正因为二千年吃人的礼教法制都挂着孔丘的招牌，故这块招牌——无论是老店、是冒牌——不能不拿下来，捶碎、烧去！”（胡适）</p>
+<p>吃人（鲁迅）</p>
+</blockquote>
+</li>
+<li><p>孔子之道不合于现代生活</p>
+<blockquote>
+<p>我们反对孔教，并不是反对孔子个人，也不是说在古代社会无价值。不过因他不能支配现代人心，适合现代潮流，还有一班人硬要拿他出来压迫现代人心，抵抗现代潮流，成为我们社会进化的最大障碍。（陈独秀）</p>
+</blockquote>
+</li>
+</ol>
+<p><em>“非礼”是新文化运动观念革命的重要一步。期间有矫枉过正的倾向</em> </p>
+<h3 id="民主与科学-是新文化运动的基本口号"><a href="#民主与科学-是新文化运动的基本口号" class="headerlink" title="民主与科学 是新文化运动的基本口号"></a><strong>民主与科学</strong> 是新文化运动的基本口号</h3><blockquote>
+<p>追本朔源，本志同人本无罪，只因为拥护那<strong>德谟克拉西</strong> 和<strong>赛因斯</strong> 这两位先生，才犯下这几条滔天的大罪。——陈独秀《本志罪案之答辩书》</p>
+</blockquote>
+<h3 id="提倡民主、反对孔教；提倡科学、反对迷信"><a href="#提倡民主、反对孔教；提倡科学、反对迷信" class="headerlink" title="提倡民主、反对孔教；提倡科学、反对迷信"></a>提倡民主、反对孔教；提倡科学、反对迷信</h3><p>通过思想启蒙，将人从封建束缚中解放出来</p>
+<p>####民主：</p>
+<ul>
+<li>既强调资产阶级<strong>民主政治制度</strong> ；</li>
+<li>更强调<strong>民主精神、民主思想</strong> ，比如个性解放、人格独立、自由      民主观念等内容。</li>
+</ul>
+<h4 id="科学："><a href="#科学：" class="headerlink" title="科学："></a>科学：</h4><ul>
+<li>既指<strong>具体的科学技术、科学知识</strong> ；</li>
+<li>更强调<strong>科学思想、科学精神、科学方法</strong> 。</li>
+</ul>
+<p><strong>科学与民主是近代中国人找到的最重要的是非标准</strong></p>
+<h2 id="3-西方思潮的涌入"><a href="#3-西方思潮的涌入" class="headerlink" title="3.西方思潮的涌入"></a>3.西方思潮的涌入</h2><p>五四之后的几年进入中国的各色理论和“主义”</p>
+<blockquote>
+<p>新实在论、尼采学说、先验主义、孔德学说、国家主义、实验主义、实用主义、柏格森学说</p>
+<p>无政府主义、 马克思主义……</p>
+</blockquote>
+<p>其中寄托着时人各样的信仰（给了中国人选择的机会）</p>
+<h1 id="二、马克思主义成为新思潮主流"><a href="#二、马克思主义成为新思潮主流" class="headerlink" title="二、马克思主义成为新思潮主流"></a>二、马克思主义成为新思潮主流</h1><h2 id="1-“一战”引发新思考"><a href="#1-“一战”引发新思考" class="headerlink" title="1.“一战”引发新思考"></a>1.“一战”引发新思考</h2><h3 id="一战引起了对于西方制度与文明的反思"><a href="#一战引起了对于西方制度与文明的反思" class="headerlink" title="一战引起了对于西方制度与文明的反思"></a>一战引起了对于西方制度与文明的反思</h3><ul>
+<li>知识分子</li>
+<li>底层人民<ul>
+<li>及苏联之后出现了几个苏维埃政权</li>
+<li>几乎在各主要资本主义国家都出现了大规模罢工</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/thegreatestkingofbunny/photo/master/lesson6.jpg" alt=""></p>
+<h3 id="寻找“第三文明”"><a href="#寻找“第三文明”" class="headerlink" title="寻找“第三文明”"></a>寻找“第三文明”</h3><h2 id="2-十月革命揭示新道路"><a href="#2-十月革命揭示新道路" class="headerlink" title="2.十月革命揭示新道路"></a>2.十月革命揭示新道路</h2><ol>
+<li>经济文化落后的国家也可以在社会主义思想指引下走向解放之路</li>
+<li>苏俄的反帝反侵略的立场、平等对待中国的态度，推动社会主义思想在中国的传播</li>
+<li>俄国工农群众革命成功提供了用暴力革命改造国家的方法启示</li>
+</ol>
+<h2 id="3-五四运动唤起新觉悟【重要】"><a href="#3-五四运动唤起新觉悟【重要】" class="headerlink" title="3.五四运动唤起新觉悟【重要】"></a>3.五四运动唤起新觉悟【重要】</h2><h3 id="五四运动的爆发"><a href="#五四运动的爆发" class="headerlink" title="五四运动的爆发"></a>五四运动的爆发</h3><blockquote>
+<p>和会规定，德国应将在中国山东获得一切特权转交给日本；5月2日《晨报》发表林长民《外交警报警告国人》：“胶州亡矣，山东亡矣，国不国矣！”</p>
+</blockquote>
+<ul>
+<li>5月4日，北京大学等十几校学生集会天安门，呼吁向列强抗议，后学生运动发展为全国性的反帝爱国群众运动<ul>
+<li><strong>运动形式</strong> 由学生抗议发展为罢工和罢市</li>
+<li><strong>斗争主力</strong> 由学生而工人</li>
+<li><strong>运动中心</strong> 由北京而上海</li>
+</ul>
+</li>
+</ul>
+<h3 id="进步知识分子看到了群众的力量"><a href="#进步知识分子看到了群众的力量" class="headerlink" title="进步知识分子看到了群众的力量"></a>进步知识分子看到了群众的力量</h3><ul>
+<li>五四运动中，中国的工人阶级、人民群众显示出强大的革命力量</li>
+<li>群众参与运动、影响运动的事实,促使人们思考在中国走十月革命之路的<strong>可行性</strong> 。</li>
+<li>一些先进知识分子开始认真地研究马克思主义的学说，马克思主义得到迅速传播</li>
+</ul>
+<h3 id="马克思主义迅速传播，形成两个中心"><a href="#马克思主义迅速传播，形成两个中心" class="headerlink" title="马克思主义迅速传播，形成两个中心"></a>马克思主义迅速传播，形成两个中心</h3><p>北京：1920年初，在李大钊的主持下，北大成立了马克思学说研究会，成员有邓中夏、高君宇、刘仁静等。</p>
+<p>上海：陈独秀南下之后凝聚了一批马克思主义研宪者，他们多数是从日本回来的留学生，有李达、陈望道、李汉俊等人。</p>
+<h3 id="为什么历史和人民选择了马克思主义【重要】"><a href="#为什么历史和人民选择了马克思主义【重要】" class="headerlink" title="为什么历史和人民选择了马克思主义【重要】"></a>为什么历史和人民选择了马克思主义【重要】</h3><ul>
+<li>在<strong>新文化运动</strong> 思想启蒙的背景下，中国<strong>反思“一战”</strong> 之后的西方显示，努力寻求更合理、更先进的制度与文明；</li>
+<li>当进步的中国人在苦苦探寻救国方策时，<strong>邻国苏俄所建立的</strong> 反强权、反压迫、奉行平等、正义的<strong>新社会</strong> 引起了这些志士仁人的向往与学习；</li>
+<li><strong>五四运动</strong> 也促使先进中国人投身群众运动、研究和传播马克思主义；</li>
+<li><strong>早期的马克思主义者，是经过反复思考和比较之后选择了马克思主义，这是理性的、合理的选择。</strong> </li>
+</ul>
+<h1 id="三、中国共产党的创建"><a href="#三、中国共产党的创建" class="headerlink" title="三、中国共产党的创建"></a>三、中国共产党的创建</h1><h2 id="1-中国共产党的早期组织"><a href="#1-中国共产党的早期组织" class="headerlink" title="1.中国共产党的早期组织"></a>1.中国共产党的早期组织</h2><h2 id="2-中国共产党“一大”召开"><a href="#2-中国共产党“一大”召开" class="headerlink" title="2.中国共产党“一大”召开"></a>2.中国共产党“一大”召开</h2><h3 id="1921年7月23日至31日”一大“召开"><a href="#1921年7月23日至31日”一大“召开" class="headerlink" title="1921年7月23日至31日”一大“召开"></a>1921年7月23日至31日”一大“召开</h3><ul>
+<li><p>通过《中国共产党第一个纲领》</p>
+<p>强调军队与无产阶级一起推翻资本家政权；建立无产阶级转正；消灭阶级；废除私有制。</p>
+</li>
+<li><p>通过《中国共产党第一个决议》</p>
+</li>
+<li><p>确定实际工作计划</p>
+<p>把工人运动放在全部工作中的首要地位</p>
+</li>
+<li><p>选举中央局：陈独秀、张国焘、李达</p>
+</li>
+<li><p>宣告全国性统一的无产阶级额政党成立</p>
+</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/thegreatestkingofbunny/photo/master/lesson6%EF%BC%882%EF%BC%89.jpg" alt=""></p>
+<h1 id="四、结语"><a href="#四、结语" class="headerlink" title="四、结语"></a>四、结语</h1><ul>
+<li>经由新文化运动的启蒙、“一战”引发的反思、十月革命的影响、五四运动的推助等，马克思主义成为历史选择；</li>
+<li>马克思主义的新信仰催生了新的组织——中国共产党，这一组织为中国的社会生活带来了全新的内容。</li>
+</ul>
+
+    </article>
+    <!-- 前后页  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+                <div class="nextSlogan">Next Post</div>
+                <a href= "/2018/04/20/lesson5/" title=  >
+                    <div class="nextTitle">[Untitled Post]</div>
+                </a>
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2018/04/16/hello-world/" title= Hello World >
+                    <div class="prevTitle">Hello World</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
+    
+    
+    <!--PC版-->
+
+    <!--PC版-->
+
+
+    
+    <!-- 评论 -->
+</main>
+            <!-- profile -->
+            
+        </div>
+        <footer class="footer footer-unloaded">
+    <!-- social  -->
+    
+    <div class="social">
+        
+    
+        
+            
+                <a href="mailto:guoshuyin123@gmail.com" class="iconfont-archer email" title=email ></a>
+            
+        
+    
+        
+            
+                <a href="//github.com/thegreatestkingofbunny" class="iconfont-archer github" target="_blank" title=github></a>
+            
+        
+    
+        
+            
+                <span class="iconfont-archer wechat" title=wechat>
+                  
+                  <img class="profile-qr" src="/assets/example_qr.png" />
+                </span>
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+    </div>
+    
+    <!-- powered by Hexo  -->
+    <div class="copyright">
+        <span id="hexo-power">Powered by <a href="https://hexo.io/" target="_blank">Hexo</a></span><span class="iconfont-archer power">&#xe635;</span><span id="theme-info">theme <a href="https://github.com/fi3ework/hexo-theme-archer" target="_blank">Archer</a></span>
+    </div>
+    <!-- 不蒜子  -->
+    
+    <div class="busuanzi-container">
+        <span id="busuanzi_container_site_pv">PV: <span id="busuanzi_value_site_pv"></span>
+        </span>
+    </div>
+    
+</footer>
+    </div>
+    <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#title：-第六讲-马克思主义传播与中国共产党诞生"><span class="toc-number">1.</span> <span class="toc-text">title： 第六讲 马克思主义传播与中国共产党诞生</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#一、新文化运动的兴起【重要】"><span class="toc-number"></span> <span class="toc-text">一、新文化运动的兴起【重要】</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-新文化运动的兴起"><span class="toc-number">1.</span> <span class="toc-text">1.新文化运动的兴起</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#关于辛亥革命失败的思考"><span class="toc-number">1.1.</span> <span class="toc-text">关于辛亥革命失败的思考</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#关于学习西方命题的思考"><span class="toc-number">1.2.</span> <span class="toc-text">关于学习西方命题的思考</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-民主与科学"><span class="toc-number">2.</span> <span class="toc-text">2.民主与科学</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#提倡民主与科学，为什么要“排孔”"><span class="toc-number">2.1.</span> <span class="toc-text">提倡民主与科学，为什么要“排孔”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#民主与科学-是新文化运动的基本口号"><span class="toc-number">2.2.</span> <span class="toc-text">民主与科学 是新文化运动的基本口号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#提倡民主、反对孔教；提倡科学、反对迷信"><span class="toc-number">2.3.</span> <span class="toc-text">提倡民主、反对孔教；提倡科学、反对迷信</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#科学："><span class="toc-number">2.3.1.</span> <span class="toc-text">科学：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-西方思潮的涌入"><span class="toc-number">3.</span> <span class="toc-text">3.西方思潮的涌入</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二、马克思主义成为新思潮主流"><span class="toc-number"></span> <span class="toc-text">二、马克思主义成为新思潮主流</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-“一战”引发新思考"><span class="toc-number">1.</span> <span class="toc-text">1.“一战”引发新思考</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一战引起了对于西方制度与文明的反思"><span class="toc-number">1.1.</span> <span class="toc-text">一战引起了对于西方制度与文明的反思</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#寻找“第三文明”"><span class="toc-number">1.2.</span> <span class="toc-text">寻找“第三文明”</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-十月革命揭示新道路"><span class="toc-number">2.</span> <span class="toc-text">2.十月革命揭示新道路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-五四运动唤起新觉悟【重要】"><span class="toc-number">3.</span> <span class="toc-text">3.五四运动唤起新觉悟【重要】</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#五四运动的爆发"><span class="toc-number">3.1.</span> <span class="toc-text">五四运动的爆发</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#进步知识分子看到了群众的力量"><span class="toc-number">3.2.</span> <span class="toc-text">进步知识分子看到了群众的力量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#马克思主义迅速传播，形成两个中心"><span class="toc-number">3.3.</span> <span class="toc-text">马克思主义迅速传播，形成两个中心</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#为什么历史和人民选择了马克思主义【重要】"><span class="toc-number">3.4.</span> <span class="toc-text">为什么历史和人民选择了马克思主义【重要】</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#三、中国共产党的创建"><span class="toc-number"></span> <span class="toc-text">三、中国共产党的创建</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-中国共产党的早期组织"><span class="toc-number">1.</span> <span class="toc-text">1.中国共产党的早期组织</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-中国共产党“一大”召开"><span class="toc-number">2.</span> <span class="toc-text">2.中国共产党“一大”召开</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1921年7月23日至31日”一大“召开"><span class="toc-number">2.1.</span> <span class="toc-text">1921年7月23日至31日”一大“召开</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#四、结语"><span class="toc-number"></span> <span class="toc-text">四、结语</span></a>
+    </div>
+    
+    <div class="back-top iconfont-archer">&#xe639;</div>
+    <div class="sidebar sidebar-hide">
+    <ul class="sidebar-tabs sidebar-tabs-active-0">
+        <li class="sidebar-tab-archives"><span class="iconfont-archer">&#xe67d;</span><span class="tab-name">Archive</span></li>
+        <li class="sidebar-tab-tags"><span class="iconfont-archer">&#xe61b;</span><span class="tab-name">Tag</span></li>
+        <li class="sidebar-tab-categories"><span class="iconfont-archer">&#xe666;</span><span class="tab-name">Cate</span></li>
+    </ul>
+    <div class="sidebar-content sidebar-content-show-archive">
+          <div class="sidebar-panel-archives">
+    <!-- 在ejs中将archive按照时间排序 -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 6 </div>
+    
+    <div class="post-archive">
+    
+    
+    
+    
+    <div class="archive-year"> 2018 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/20</span><a class="archive-post-title" href= "/2018/04/20/lesson6/" >[Untitled Post]</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/04/16/hello-world/" >Hello World</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/04/20/lesson5/" >[Untitled Post]</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> 2018 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/20</span><a class="archive-post-title" href= "/2018/04/20/lesson1-introduction/" >[Untitled Post]</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/20</span><a class="archive-post-title" href= "/2018/04/20/lesson4/" >[Untitled Post]</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/20</span><a class="archive-post-title" href= "/2018/04/20/lesson3/" >[Untitled Post]</a>
+        </li>
+    
+    </div>
+  </div>
+        <div class="sidebar-panel-tags">
+    <div class="sidebar-tags-name">
+    
+    </div>
+    <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
+    <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
+    缺失模块。<br/>
+    1、请确保node版本大于6.2<br/>
+    2、在博客根目录（注意不是archer根目录）执行以下命令：<br/>
+    <span style="color: #f75357; font-size: 1rem; line-height: 2rem;">npm i hexo-generator-json-content --save</span><br/>
+    3、在根目录_config.yml里添加配置：
+    <pre style="color: #787878; font-size: 0.6rem;">
+jsonContent:
+  meta: false
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: false
+    raw: false
+    content: false
+    slug: false
+    updated: false
+    comments: false
+    link: false
+    permalink: false
+    excerpt: false
+    categories: true
+    tags: true</pre>
+    </div> 
+    <div class="sidebar-tags-list"></div>
+</div>
+        <div class="sidebar-panel-categories">
+    <div class="sidebar-categories-name">
+    
+    </div>
+    <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>
+    <div class="sidebar-categories-list"></div>
+</div>
+    </div>
+</div> 
+    <script>
+    var siteMeta = {
+        root: '/',
+        author: '郭书音'
+    }
+</script>
+    <!-- busuanzi  -->
+    
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+    <!-- CNZZ  -->
+    
+    </div>
+    <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
+    
+    </body>
+</html>
+
+

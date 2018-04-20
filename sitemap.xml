@@ -2,9 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/2018/04/18/lesson4/</loc>
+    <loc>http://yoursite.com/2018/04/20/lesson3/</loc>
     
-    <lastmod>2018-04-18T12:45:13.954Z</lastmod>
+    <lastmod>2018-04-20T01:25:30.432Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2018/04/20/lesson6/</loc>
+    
+    <lastmod>2018-04-19T13:28:20.899Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2018/04/20/lesson1-introduction/</loc>
+    
+    <lastmod>2018-04-19T13:27:54.934Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2018/04/20/lesson4/</loc>
+    
+    <lastmod>2018-04-19T13:24:06.466Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2018/04/20/lesson5/</loc>
+    
+    <lastmod>2018-04-19T13:07:29.381Z</lastmod>
     
   </url>
   

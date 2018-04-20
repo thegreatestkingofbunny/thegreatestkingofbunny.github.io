@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html>
+    <!-- title -->
+
+
+
+
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
+    <meta name="description" content="">
+    <title>Guo Shuyin&#39;s Studio</title>
+    <style type="text/css">
+    @font-face {
+        font-family: 'Oswald-Regular';
+        src: url("/font/Oswald-Regular.ttf");
+    }
+
+    body {
+        margin: 0;
+    }
+
+    header,
+    footer,
+    .back-top,
+    .sidebar,
+    .container,
+    .site-intro-meta,
+    .toc-wrapper {
+        display: none;
+    }
+
+    .site-intro {
+        position: relative;
+        z-index: 3;
+        width: 100%;
+        /* height: 50vh; */
+        overflow: hidden;
+    }
+
+    .site-intro-placeholder {
+        position: absolute;
+        z-index: -2;
+        top: 0;
+        left: 0;
+        width: calc(100% + 300px);
+        height: 100%;
+        background: repeating-linear-gradient(-45deg, #444 0, #444 80px, #333 80px, #333 160px);
+        background-position: center center;
+        transform: translate3d(-226px, 0, 0);
+        animation: gradient-move 2.5s ease-out 0s 1;
+    }
+
+    @keyframes gradient-move {
+        0% {
+            transform: translate3d(-226px, 0, 0);
+        }
+        100% {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+</style>
+
+    <link rel="preload" href= /css/style.css?v=20180317 as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" type="text/css" href= /css/mobile.css?v=20180317 media="(max-width: 980px)"/>
+    
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        
+    <link rel="icon" href= /assets/favicon.ico>
+    <script>
+        (function (w) {
+            "use strict";
+            // rel=preload support test
+            if (!w.loadCSS) {
+                w.loadCSS = function () { };
+            }
+            // define on the loadCSS obj
+            var rp = loadCSS.relpreload = {};
+            // rel=preload feature support test
+            // runs once and returns a function for compat purposes
+            rp.support = (function () {
+                var ret;
+                try {
+                    ret = w.document.createElement("link").relList.supports("preload");
+                } catch (e) {
+                    ret = false;
+                }
+                return function () {
+                    return ret;
+                };
+            })();
+
+            // if preload isn't supported, get an asynchronous load by using a non-matching media attribute
+            // then change that media back to its intended value on load
+            rp.bindMediaToggle = function (link) {
+                // remember existing media attr for ultimate state, or default to 'all'
+                var finalMedia = link.media || "all";
+
+                function enableStylesheet() {
+                    link.media = finalMedia;
+                }
+
+                // bind load handlers to enable media
+                if (link.addEventListener) {
+                    link.addEventListener("load", enableStylesheet);
+                } else if (link.attachEvent) {
+                    link.attachEvent("onload", enableStylesheet);
+                }
+
+                // Set rel and non-applicable media type to start an async request
+                // note: timeout allows this to happen async to let rendering continue in IE
+                setTimeout(function () {
+                    link.rel = "stylesheet";
+                    link.media = "only x";
+                });
+                // also enable media after 3 seconds,
+                // which will catch very old browsers (android 2.x, old firefox) that don't support onload on link
+                setTimeout(enableStylesheet, 3000);
+            };
+
+            // loop through link elements in DOM
+            rp.poly = function () {
+                // double check this to prevent external calls from running
+                if (rp.support()) {
+                    return;
+                }
+                var links = w.document.getElementsByTagName("link");
+                for (var i = 0; i < links.length; i++) {
+                    var link = links[i];
+                    // qualify links to those with rel=preload and as=style attrs
+                    if (link.rel === "preload" && link.getAttribute("as") === "style" && !link.getAttribute("data-loadcss")) {
+                        // prevent rerunning on link
+                        link.setAttribute("data-loadcss", true);
+                        // bind listeners to toggle media back
+                        rp.bindMediaToggle(link);
+                    }
+                }
+            };
+
+            // if unsupported, run the polyfill
+            if (!rp.support()) {
+                // run once at least
+                rp.poly();
+
+                // rerun poly on an interval until onload
+                var run = w.setInterval(rp.poly, 500);
+                if (w.addEventListener) {
+                    w.addEventListener("load", function () {
+                        rp.poly();
+                        w.clearInterval(run);
+                    });
+                } else if (w.attachEvent) {
+                    w.attachEvent("onload", function () {
+                        rp.poly();
+                        w.clearInterval(run);
+                    });
+                }
+            }
+            // commonjs
+            if (typeof exports !== "undefined") {
+                exports.loadCSS = loadCSS;
+            }
+            else {
+                w.loadCSS = loadCSS;
+            }
+        }(typeof global !== "undefined" ? global : this));
+    </script>
+    <script src="//cdn.staticfile.org/jquery/3.2.1/jquery.min.js" defer></script>
+    <script src="/scripts/main.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" defer></script>
+    <!-- 百度统计  -->
+    
+    <!-- 谷歌统计  -->
+    
+</head>
+
+    
+        <body class="post-body">
+    
+    
+<header class="header">
+
+    <div class="read-progress"></div>
+    <div class="header-sidebar-menu">&#xe775;</div>
+    <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >Guo Shuyin&#39;s Studio.</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name"></a>
+            </div>
+    </div>
+    
+    <a class="home-link" href=/>Guo Shuyin's Studio.</a>
+</header>
+    <div class="wrapper">
+        <div class="site-intro" style=
+
+
+
+
+
+
+
+
+height:50vh;
+
+>
+    
+    <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
+            
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
+    <div class="site-intro-placeholder"></div>
+    <div class="site-intro-meta">
+        <!-- 标题  -->
+        <h1 class="intro-title">
+            <!-- 主页  -->
+            
+            [Untitled Post]
+            <!-- 404 -->
+            
+        </h1>
+        <!-- 副标题 -->
+        <p class="intro-subtitle">
+            <!-- 主页副标题  -->
+            
+            
+            <!-- 404 -->
+            
+        </p>
+        <!-- 文章页meta -->
+        
+            <!-- 文章页标签  -->
+            
+            <div class="post-intro-meta">
+                <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                <span class="post-intro-time">2018/04/20</span>
+                
+                <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                    <span class="iconfont-archer">&#xe602;</span>
+                    <span id="busuanzi_value_page_pv"></span>
+                </span>
+                
+                <span class="shareWrapper">
+                    <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                    <span class="shareText">Share</span>
+                    <ul class="shareList">
+                        <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                            <div class="share-qrcode"></div>
+                        </li>
+                        <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                        <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                        <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                        <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                    </ul>
+                </span>
+            </div>
+        
+    </div>
+</div>
+        <script>
+  // load webfont-loader async, and add callback function
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+  
+  // get user agent
+  var browser = {
+    versions: function () {
+      var u = window.navigator.userAgent;
+      return {
+        userAgent: u,
+        trident: u.indexOf('Trident') > -1, //IE内核
+        presto: u.indexOf('Presto') > -1, //opera内核
+        webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+        gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+        mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+        ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+        android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+        iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者安卓QQ浏览器
+        iPad: u.indexOf('iPad') > -1, //是否为iPad
+        webApp: u.indexOf('Safari') == -1, //是否为web应用程序，没有头部与底部
+        weixin: u.indexOf('MicroMessenger') == -1, //是否为微信浏览器
+        uc: u.indexOf('UCBrowser') > -1 //是否为android下的UC浏览器
+      };
+    }()
+  }
+  console.log("userAgent:" + browser.versions.userAgent);
+
+  // callback
+  function fontLoaded() {
+    console.log('font loaded');
+    if (document.getElementsByClassName('site-intro-meta')) {
+      document.getElementsByClassName('intro-title')[0].classList.add('intro-fade-in');
+      document.getElementsByClassName('intro-subtitle')[0].classList.add('intro-fade-in');
+      var postIntroTags = document.getElementsByClassName('post-intro-tags')[0],
+        postIntroMeat = document.getElementsByClassName('post-intro-meta')[0];
+      if (postIntroTags) {
+        postIntroTags.classList.add('post-fade-in');
+      }
+      if (postIntroMeat) {
+        postIntroMeat.classList.add('post-fade-in');
+      }
+    }
+  }
+
+  // UC不支持跨域，所以直接显示
+  function asyncCb(){
+    if (browser.versions.uc) {
+      console.log("UCBrowser");
+      fontLoaded();
+    } else {
+      WebFont.load({
+        custom: {
+          families: ['Oswald-Regular']
+        },
+        loading: function () {  //所有字体开始加载
+          // console.log('loading');
+        },
+        active: function () {  //所有字体已渲染
+          fontLoaded();
+        },
+        inactive: function () { //字体预加载失败，无效字体或浏览器不支持加载
+          console.log('inactive: timeout');
+          fontLoaded();
+        },
+        timeout: 5000 // Set the timeout to two seconds
+      });
+    }
+  }
+
+  async("https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js", asyncCb)
+</script>        
+        <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
+        <div class="container container-unloaded">
+            <main class="main post-page">
+    <article class="article-entry">
+        <hr>
+<h2 id="title：-第三讲-对国家出路的早期探索"><a href="#title：-第三讲-对国家出路的早期探索" class="headerlink" title="title： 第三讲 对国家出路的早期探索"></a>title： 第三讲 对国家出路的早期探索</h2><h1 id="一、下层民众的暴力革命与理想追求"><a href="#一、下层民众的暴力革命与理想追求" class="headerlink" title="一、下层民众的暴力革命与理想追求"></a>一、下层民众的暴力革命与理想追求</h1><h2 id="1-洪秀全与拜上帝教"><a href="#1-洪秀全与拜上帝教" class="headerlink" title="1.洪秀全与拜上帝教"></a>1.洪秀全与拜上帝教</h2><h3 id="洪秀全"><a href="#洪秀全" class="headerlink" title="洪秀全"></a>洪秀全</h3><blockquote>
+<p>洪秀全（1814-1864），出生于广东花县官禄布村（此处有误，实际应出生于福源水村，后移居官禄布村）（<em>更接触外来影响</em> ），客家人（<em>外来迁入因此生活条件更差，勇于斗争</em> ），自幼读四书五经。</p>
+</blockquote>
+<ul>
+<li>1836年之前得到梁发所撰《劝世良言》</li>
+<li>1837年，昏梦一场，据他回忆说自己曾上达天国，见过一位金发皂袍长者，受命拯救俗世。</li>
+<li>1843年，第四次应考失败后，成立拜上帝教。</li>
+</ul>
+<h2 id="2-拜上帝教"><a href="#2-拜上帝教" class="headerlink" title="2.拜上帝教"></a>2.拜上帝教</h2><ul>
+<li><p>原始基督教教义与传统大同思想（上帝有妻子大母等）的结合</p>
+</li>
+<li><p>分为</p>
+<ul>
+<li>天父上主皇上帝 <em>耶和华</em> </li>
+<li>天兄 <em>耶稣</em></li>
+<li>天弟 <em>洪秀全</em> </li>
+</ul>
+</li>
+<li><p>早期信徒有冯云山、洪仁玕、李敬芳等；后传教中心从广东<strong>花县</strong> 移到广西<strong>贵县、桂平</strong> 等地</p>
+</li>
+<li><p>利用拜上帝教来发动组织群众，会众多为<strong>客家人</strong> </p>
+</li>
+<li><p>1851年1.11，在桂平县金田村宣布起义，年号为<strong>太平天国</strong> ，当年为太平天国元年，军称<strong>太平军</strong> </p>
+</li>
+<li><p>1851.12，洪秀全在永安建制，封东西南北翼各王，“所封各王，俱受东王节制”</p>
+</li>
+<li><p>转战两湖</p>
+</li>
+<li><p>定都天京：1853.3，太平军占南京；3.29，东王迎天王入南京，改南京为天京，定位都城</p>
+<p><em>行程顺利的原因</em></p>
+<ul>
+<li>清朝制度腐败，实力衰弱</li>
+<li>太平军纪严明，厚待百姓，得到百姓支持</li>
+</ul>
+</li>
+<li><p>西征：1856.4~6，太平军击溃清军大营，解除天京威胁，进入军事全盛时期</p>
+<p>北伐：曾国藩组湘军但被打败；太平军后在天津被清军打败</p>
+</li>
+</ul>
+<h2 id="3-太平天国的理想与现实"><a href="#3-太平天国的理想与现实" class="headerlink" title="3.太平天国的理想与现实"></a>3.太平天国的理想与现实</h2><h3 id="1-《天朝田亩制度》【重要】"><a href="#1-《天朝田亩制度》【重要】" class="headerlink" title="1.《天朝田亩制度》【重要】"></a>1.《天朝田亩制度》【重要】</h3><p>颁布与1853年11，是太平天国最核心的社会理想</p>
+<blockquote>
+<p>有田同耕，有饭同食，有衣同穿，有钱同使，无处不均匀，无人不饱暖</p>
+</blockquote>
+<h4 id="1）基本内容"><a href="#1）基本内容" class="headerlink" title="1）基本内容"></a>1）基本内容</h4><p><strong>“均田”</strong> 土地公有 （<em>农民只有使用权，不能随意买卖；土地归上帝所有</em> ）</p>
+<ul>
+<li>按亩产高低划分土地为九等，好坏搭配，按人口平均分配</li>
+<li>凡16岁以上的男女，每人1分，不满16岁者减半</li>
+</ul>
+<p><strong>“圣库”</strong> 财富共享 （<em>个人无私财</em> ）</p>
+<ul>
+<li>生产所得的所有财富，“除足其25家每人所食可接新谷外，余则归圣库”</li>
+<li>“所有婚娶弥月稀释，俱用国库，但有限式，不得多用一钱”</li>
+<li>鳏寡孤独废疾者，“皆领国库以养”</li>
+</ul>
+<p><strong>“两”</strong> 基层政权组织 （<em>农业生产分配以“两”实现管理</em> ）</p>
+<ul>
+<li>每25户为一“两”，馆长为“两司马”</li>
+<li>农业、副业产品的生产与分配，都以农村政权基层组织“两”来实行管理。</li>
+</ul>
+<h4 id="2）现实合理性"><a href="#2）现实合理性" class="headerlink" title="2）现实合理性"></a>2）现实合理性</h4><ul>
+<li>回应着近代中国最主要的社会问题——如何解决<strong>土地</strong>问题</li>
+<li>通过<strong>土地公有</strong> 否定<strong>封建土地私有</strong> ，是一种发展和超越</li>
+<li>代表着占全国人口绝大多数的<strong>农民</strong> 的利益</li>
+</ul>
+<h4 id="3）空想性"><a href="#3）空想性" class="headerlink" title="3）空想性"></a>3）空想性</h4><ul>
+<li>无法改变中国农业小生产的经济基础</li>
+<li>在生产力水平低下，社会财富有限的基础上，公有制是无法实现的</li>
+</ul>
+<h4 id="4）后期问题"><a href="#4）后期问题" class="headerlink" title="4）后期问题"></a>4）后期问题</h4><ul>
+<li>为解决天京缺粮问题，太平天国开始实行<strong>“照旧交粮纳税”</strong> （<em>回到土地私有制</em> ）</li>
+<li>承认土地占有的合法性，土地所有者向太平天国政权交纳钱粮</li>
+<li>定都天京后，军中财物共享制度遭到破坏，士兵开始私存财物，将官生活渐趋奢侈</li>
+<li>作为小私有者，农民也不愿意把劳动所得的剩余生产物统一交给圣库支配。</li>
+</ul>
+<p><strong>否定封建制度之后，太平天国一时未能找到合适的替代方案。</strong> </p>
+<h3 id="2-《资政新篇》【重要】（资本主义色彩-）"><a href="#2-《资政新篇》【重要】（资本主义色彩-）" class="headerlink" title="2.《资政新篇》【重要】（资本主义色彩 ）"></a>2.《资政新篇》【重要】（<em>资本主义色彩</em> ）</h3><h4 id="1）提出"><a href="#1）提出" class="headerlink" title="1）提出"></a>1）提出</h4><ul>
+<li>1859年，洪仁玕到达天京，被封为“干王”，总理太平天国的朝政</li>
+<li>1860年，他提出全新改革方案：《资政新篇》</li>
+</ul>
+<h4 id="2）主要内容"><a href="#2）主要内容" class="headerlink" title="2）主要内容"></a>2）主要内容</h4><h5 id="政治"><a href="#政治" class="headerlink" title="政治"></a>政治</h5><ul>
+<li>革除弊端，“禁朋党之端”</li>
+<li>学习西方，制订新的法律和制度</li>
+</ul>
+<h5 id="经济"><a href="#经济" class="headerlink" title="经济"></a>经济</h5><ul>
+<li>兴办近代企业、事业</li>
+<li>学习西方科学技术及科技奖励制度</li>
+<li>提倡效仿西方的雇佣劳动制度</li>
+</ul>
+<h5 id="文化"><a href="#文化" class="headerlink" title="文化"></a>文化</h5><ul>
+<li>设立新闻官和新闻馆</li>
+<li>兴办学校、医院和社会福利事业</li>
+</ul>
+<h5 id="外交"><a href="#外交" class="headerlink" title="外交"></a>外交</h5><ul>
+<li>平等外交、自由通商等</li>
+</ul>
+<h4 id="3）评价"><a href="#3）评价" class="headerlink" title="3）评价"></a>3）评价</h4><ul>
+<li><p>思想内容：内容基本游离于农民斗争之外的、具有资本主义色彩的社会改造方案</p>
+<p><em>提倡雇佣劳动；未提及土地问题等</em> </p>
+</li>
+<li><p>历史时机：是中国近代最早提出的学习西方、主张发展资本主义的社会改造方案</p>
+<ul>
+<li><em>顺应着近代历史发展的潮流</em></li>
+<li><em>缺少可现实的社会力量</em> </li>
+</ul>
+</li>
+<li><p>社会影响：在当时未受重视，影响很小</p>
+</li>
+</ul>
+<h3 id="3-国际观念"><a href="#3-国际观念" class="headerlink" title="3.国际观念"></a>3.国际观念</h3><ul>
+<li><p>尚未具备平等外交的观念</p>
+</li>
+<li><p>未能认清列强殖民侵略的本质</p>
+<p><strong>以朴素的疆域意识、受“光复疆土”使命感的召唤，反对列强侵占中国土地</strong></p>
+<p><strong>对于列强在关税权、司法权、内河航运权等方面的特权，太平天国并未有正确的认识</strong> </p>
+</li>
+</ul>
+<h2 id="4-太平天国的历史意义【重要】"><a href="#4-太平天国的历史意义【重要】" class="headerlink" title="4.太平天国的历史意义【重要】"></a>4.太平天国的历史意义【重要】</h2><h3 id="1-回应着中国近代历史的社会主题"><a href="#1-回应着中国近代历史的社会主题" class="headerlink" title="1.回应着中国近代历史的社会主题"></a>1.回应着中国近代历史的社会主题</h3><ul>
+<li><p>否定封建制度，动摇清政府根基</p>
+<p><em>削弱清王朝的统治</em></p>
+<p><em>冲击封建意识形态儒学</em></p>
+<p><em>掀起各族民众反清斗争高潮</em></p>
+</li>
+<li><p>打击侵略势力，冲击西方殖民者在亚洲的统治</p>
+<p><em>做出反侵略的业绩</em></p>
+<p><em>打击列强在亚洲的殖民统治</em></p>
+</li>
+<li><p>首次提出较系统地发展资本主义的方案</p>
+</li>
+</ul>
+<h3 id="2-开启了近代中国历史的革命模式"><a href="#2-开启了近代中国历史的革命模式" class="headerlink" title="2.开启了近代中国历史的革命模式"></a>2.开启了近代中国历史的革命模式</h3><ul>
+<li>近代中国的社会矛盾空前尖锐，不摧毁旧制度无法改变陈腐的生产关系，无法解放和发展生产力</li>
+<li>太平天国革命在后世产生了激励作用</li>
+</ul>
+<h3 id="3-改变了晚清以降的历史格局"><a href="#3-改变了晚清以降的历史格局" class="headerlink" title="3.改变了晚清以降的历史格局"></a>3.改变了晚清以降的历史格局</h3><ul>
+<li><p>改变满汉关系</p>
+<p>因有军功，湘军、淮军将官被选任要职，汉人渐居督抚要位</p>
+</li>
+<li><p>促使军队私属化</p>
+<ul>
+<li>募乡民为士兵，选同乡做官佐</li>
+<li>“将死军散，将活军存”</li>
+</ul>
+</li>
+<li><p>改变地方与中央关系</p>
+<p>地方大员集行政权、人事、财政诸权于一身，形成“督抚专政”的局面 （<em>对中央形成威胁</em> ）</p>
+</li>
+</ul>
+<h1 id="二、统治层的自救与自强"><a href="#二、统治层的自救与自强" class="headerlink" title="二、统治层的自救与自强"></a>二、统治层的自救与自强</h1><h2 id="1-洋务运动的背景"><a href="#1-洋务运动的背景" class="headerlink" title="1.洋务运动的背景"></a>1.洋务运动的背景</h2><ul>
+<li><p>1860年前后，中国再次遭受列强的侵略战争</p>
+<blockquote>
+<ul>
+<li><strong>广州</strong> 被英法联军攻占；<strong>京城</strong> 沦陷，圆明园被毁</li>
+<li>被迫签订了《北京条约》等一系列不平等条约</li>
+<li>“当和议之成，吾人不为<strong>自强</strong> 之言”</li>
+</ul>
+</blockquote>
+</li>
+<li><p>内忧外患之下，“自强”运动兴起，史称洋务运动</p>
+<blockquote>
+<p>“制敌在乎<strong>自强</strong> ，<strong>自强</strong> 必先练兵。比者抚局虽成，而国威未振，宜虽国振兴，使彼<strong>顺则</strong> 可以相安，<strong>逆则</strong> 可以有备。”</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="2-洋务运动的启动"><a href="#2-洋务运动的启动" class="headerlink" title="2.洋务运动的启动"></a>2.洋务运动的启动</h2><ul>
+<li><p>1861年1.1，清廷批准成立，初名“<strong>抚夷局</strong> ”，后被迫改名为“<strong>总理各国事务衙门</strong> ”</p>
+<p>总览外交以及同外国发生干系的财政、军事、教育、制造、矿物、交通、海防、边务等各方面的大权，成为一切洋务的包办者</p>
+</li>
+</ul>
+<h3 id="布新而不除旧，从边缘推进改革"><a href="#布新而不除旧，从边缘推进改革" class="headerlink" title="布新而不除旧，从边缘推进改革"></a>布新而不除旧，从边缘推进改革</h3><p>洋务运动都是地方督抚大员在推进，即使筹建海军等使馆国防的大事也不例外</p>
+<p>洋务企业一般在沿海、沿江地区</p>
+<p><em>阻力、风险、掣肘、统筹计划、成效</em> </p>
+<h3 id="中体西用，从器物方面学习西方【重要】"><a href="#中体西用，从器物方面学习西方【重要】" class="headerlink" title="中体西用，从器物方面学习西方【重要】"></a>中体西用，从器物方面学习西方【重要】</h3><ul>
+<li>1876年，李鸿章会见日本驻中国公使<strong>森有礼</strong> ，两人就日本“易衣冠”的问题有过讨论</li>
+</ul>
+<ul>
+<li><p>衣冠服制（中方认为不可学，日方认为可学）</p>
+<p>礼→中体，不可动摇的本</p>
+</li>
+<li><p>军器、铁路、电信及其他器械</p>
+<p>术→西用，拿来为用的工具</p>
+</li>
+</ul>
+<p>“以中国之<strong>伦常名教</strong> 为根本，辅以<strong>诸国富强之术</strong> ”</p>
+<p>“中学为体，西学为用”是洋务运动的纲领，意指<strong>以中国封建伦常所维护的统治秩序为主体，用西方近代工业和级数为辅助，以前者来支配后者</strong> 。</p>
+<h2 id="3-洋务运动的历史作用【重要】"><a href="#3-洋务运动的历史作用【重要】" class="headerlink" title="3.洋务运动的历史作用【重要】"></a>3.洋务运动的历史作用【重要】</h2><blockquote>
+<ul>
+<li>1865年，以容闳从美国购买机器为基础，当称是“御侮之资，自强之本”的江南制造总局诞生</li>
+<li>洋务运动以军事建设起步，由此，西方枪炮、轮船、弹丸、机器等被引入中国以求“<strong>自强</strong> ”</li>
+<li>至1894年，军事工业企业数量为24所</li>
+</ul>
+</blockquote>
+<h3 id="1-启动了中国近代工业的历程（生产力方面）"><a href="#1-启动了中国近代工业的历程（生产力方面）" class="headerlink" title="1.启动了中国近代工业的历程（生产力方面）"></a>1.启动了中国近代工业的历程（生产力方面）</h3><ul>
+<li>坚船利炮并非孤立之物</li>
+<li>军工企业需要远离原料、燃料、交通、资金等方面支持</li>
+</ul>
+<blockquote>
+<ul>
+<li>1870年，开始创办民用企业，以达“求富”目标</li>
+<li>至1894年，民用工业企业数量大于40所</li>
+</ul>
+</blockquote>
+<h3 id="2-促进了民族资本主义的发展"><a href="#2-促进了民族资本主义的发展" class="headerlink" title="2.促进了民族资本主义的发展"></a>2.促进了民族资本主义的发展</h3><h4 id="1）"><a href="#1）" class="headerlink" title="1）"></a>1）</h4><h5 id="官办企业："><a href="#官办企业：" class="headerlink" title="官办企业："></a>官办企业：</h5><ul>
+<li>洋务所办军工企业</li>
+<li>国库支付开销，产品调拨分配，内无利润积累，外无市场联系，是历史上官办封建工业的延续</li>
+</ul>
+<h5 id="官督商办（或官商合办）"><a href="#官督商办（或官商合办）" class="headerlink" title="官督商办（或官商合办）"></a>官督商办（或官商合办）</h5><ul>
+<li>洋务所办民用企业（官僚资本主义的前身，颇具封建性，多经营不善）</li>
+<li>官督商办是针对官无资金、不善经营，商有资本且善经营而采取的一种经营企业的方式</li>
+<li>“官为护持，商以承办”，由官府督办，商人自筹股资、具体经营</li>
+</ul>
+<h4 id="2）买办与买办资产阶级"><a href="#2）买办与买办资产阶级" class="headerlink" title="2）买办与买办资产阶级"></a>2）买办与买办资产阶级</h4><blockquote>
+<p>唐廷枢，广东省唐家湾人，曾在香港读书，做过低级职员、翻译，后怡和洋行做代理生意。</p>
+</blockquote>
+<ul>
+<li>买办，comprador，起初指为外商服务的采买人或管事人</li>
+<li>洋务运动时期，买办商人开始投资于官督商办企业，或成立创办近代工商企业</li>
+<li>买办商人身上兼具买办性与民族性</li>
+<li>后世所说的<strong>买办资产阶级</strong> ，指依附外国垄断资本并为他们服务的大资产阶级</li>
+</ul>
+<h4 id="3）民族资本主义企业"><a href="#3）民族资本主义企业" class="headerlink" title="3）民族资本主义企业"></a>3）民族资本主义企业</h4><ul>
+<li><p>洋务企业一定程度上在社会上形成表率和带动，一些持有货币财富者开始独立投身于创办近代企业</p>
+<blockquote>
+<p>1872年创办于南海的继昌隆缫丝厂（陈启源）为近代中国第一家民族资本主义企业；早期这类企业多经营缫丝、火柴、面粉、造纸、碾米等，规模不大</p>
+</blockquote>
+</li>
+</ul>
+<p><strong>民族资本主义</strong> 与封建官府没有太多瓜葛，与外商也少有联系，代表中国独立发展资本主义的方向</p>
+<h3 id="3-出现了近代文化教育事业"><a href="#3-出现了近代文化教育事业" class="headerlink" title="3.出现了近代文化教育事业"></a>3.出现了近代文化教育事业</h3><p>使封建文教体制边上长出了新式文教事物</p>
+<h5 id="新式学校"><a href="#新式学校" class="headerlink" title="新式学校"></a>新式学校</h5><ul>
+<li><strong>翻译学堂</strong> （广方言馆）</li>
+<li>工艺学堂、军事学校</li>
+</ul>
+<h5 id="留学生"><a href="#留学生" class="headerlink" title="留学生"></a>留学生</h5><ul>
+<li>官派赴美国留学</li>
+<li>赴英法学习海军</li>
+</ul>
+<h3 id="4-带来了生活方式和社会风气的变化"><a href="#4-带来了生活方式和社会风气的变化" class="headerlink" title="4.带来了生活方式和社会风气的变化"></a>4.带来了生活方式和社会风气的变化</h3><ul>
+<li>现代技术和器物开始被接受</li>
+<li>工商业者地位开始上升（张謇：大生纱厂）</li>
+<li>社会价值出现多元</li>
+</ul>
+<h2 id="4-洋务运动的失败原因【重要】"><a href="#4-洋务运动的失败原因【重要】" class="headerlink" title="4.洋务运动的失败原因【重要】"></a>4.洋务运动的失败原因【重要】</h2><p>甲午一战，北洋海军全军覆没，以“自强”和“求富”为目标的洋务运动失败了</p>
+<h3 id="1）封建性"><a href="#1）封建性" class="headerlink" title="1）封建性"></a>1）封建性</h3><ul>
+<li>垄断经营、侵吞商股，压制民族资本</li>
+<li>“中<strong>体</strong> 西<strong>用</strong> ”指导思想不可行</li>
+</ul>
+<h3 id="2）腐朽性"><a href="#2）腐朽性" class="headerlink" title="2）腐朽性"></a>2）腐朽性</h3><ul>
+<li>官办企业仍封建衙门式的管理方式</li>
+<li>官督商办等企业中也是管理腐败，具有官场恶习</li>
+</ul>
+<h3 id="3）依赖性"><a href="#3）依赖性" class="headerlink" title="3）依赖性"></a>3）依赖性</h3><ul>
+<li>对外技术的依赖</li>
+<li>“守约”带来的妥协性</li>
+</ul>
+<h1 id="三、士大夫的觉醒与变革"><a href="#三、士大夫的觉醒与变革" class="headerlink" title="三、士大夫的觉醒与变革"></a>三、士大夫的觉醒与变革</h1><h2 id="1-百日维新"><a href="#1-百日维新" class="headerlink" title="1.百日维新"></a>1.百日维新</h2><h2 id="2-维新变法的内容"><a href="#2-维新变法的内容" class="headerlink" title="2.维新变法的内容"></a>2.维新变法的内容</h2><p><img src="https://raw.githubusercontent.com/thegreatestkingofbunny/photo/master/lesson3.jpg" alt=""></p>
+<h2 id="3-维新变法运动的特点"><a href="#3-维新变法运动的特点" class="headerlink" title="3.维新变法运动的特点"></a>3.维新变法运动的特点</h2><ul>
+<li>除旧布新并行</li>
+<li>尝试制度改变</li>
+<li>中枢驱动变法</li>
+<li>延续洋务举措</li>
+</ul>
+<h2 id="4-戊戌政变"><a href="#4-戊戌政变" class="headerlink" title="4.戊戌政变"></a>4.戊戌政变</h2><ul>
+<li>变法运动一开始就遭到了抵制与反对。1898年9.21，以慈禧太后为首的封建派发动政变，慈溪重新“训政”。之后，不少变法措施陆续被中止，光绪皇帝被软禁，谭嗣同等6人被杀，史称“戊戌六君子”</li>
+</ul>
+<h2 id="维新变法运动的意义和教训如何？"><a href="#维新变法运动的意义和教训如何？" class="headerlink" title="维新变法运动的意义和教训如何？"></a>维新变法运动的意义和教训如何？</h2><ul>
+<li>爱国救亡</li>
+<li>资产阶级性质的政治改良</li>
+<li>思想启蒙</li>
+<li>封建势力的强大</li>
+<li>所代表的阶级基础弱小</li>
+<li>维新派本身具有局限性</li>
+</ul>
+<h1 id="四、结语"><a href="#四、结语" class="headerlink" title="四、结语"></a>四、结语</h1><ul>
+<li>近代早期，下层民众、统治阶级、士大夫群体都先后为应对“大变局”而行动起来。</li>
+<li>事实证明，传统农业社会里的阶级力量难以解决近代中国所面临的问题，中国需要新的阶级力量；通过统治者走自下而上的改良道路也很难成功。</li>
+<li>改革之门越窄，革命之门就越宽；改革之门紧闭之时，就是革命之门敞开之日。</li>
+</ul>
+
+    </article>
+    <!-- 前后页  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+                <div class="nextSlogan">Next Post</div>
+                <a href= "/2018/04/20/lesson1-introduction/" title=  >
+                    <div class="nextTitle">[Untitled Post]</div>
+                </a>
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2018/04/20/lesson4/" title=  >
+                    <div class="prevTitle">[Untitled Post]</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
+    
+    
+    <!--PC版-->
+
+    <!--PC版-->
+
+
+    
+    <!-- 评论 -->
+</main>
+            <!-- profile -->
+            
+        </div>
+        <footer class="footer footer-unloaded">
+    <!-- social  -->
+    
+    <div class="social">
+        
+    
+        
+            
+                <a href="mailto:guoshuyin123@gmail.com" class="iconfont-archer email" title=email ></a>
+            
+        
+    
+        
+            
+                <a href="//github.com/thegreatestkingofbunny" class="iconfont-archer github" target="_blank" title=github></a>
+            
+        
+    
+        
+            
+                <span class="iconfont-archer wechat" title=wechat>
+                  
+                  <img class="profile-qr" src="/assets/example_qr.png" />
+                </span>
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+    </div>
+    
+    <!-- powered by Hexo  -->
+    <div class="copyright">
+        <span id="hexo-power">Powered by <a href="https://hexo.io/" target="_blank">Hexo</a></span><span class="iconfont-archer power">&#xe635;</span><span id="theme-info">theme <a href="https://github.com/fi3ework/hexo-theme-archer" target="_blank">Archer</a></span>
+    </div>
+    <!-- 不蒜子  -->
+    
+    <div class="busuanzi-container">
+        <span id="busuanzi_container_site_pv">PV: <span id="busuanzi_value_site_pv"></span>
+        </span>
+    </div>
+    
+</footer>
+    </div>
+    <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#title：-第三讲-对国家出路的早期探索"><span class="toc-number">1.</span> <span class="toc-text">title： 第三讲 对国家出路的早期探索</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#一、下层民众的暴力革命与理想追求"><span class="toc-number"></span> <span class="toc-text">一、下层民众的暴力革命与理想追求</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-洪秀全与拜上帝教"><span class="toc-number">1.</span> <span class="toc-text">1.洪秀全与拜上帝教</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#洪秀全"><span class="toc-number">1.1.</span> <span class="toc-text">洪秀全</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-拜上帝教"><span class="toc-number">2.</span> <span class="toc-text">2.拜上帝教</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-太平天国的理想与现实"><span class="toc-number">3.</span> <span class="toc-text">3.太平天国的理想与现实</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-《天朝田亩制度》【重要】"><span class="toc-number">3.1.</span> <span class="toc-text">1.《天朝田亩制度》【重要】</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1）基本内容"><span class="toc-number">3.1.1.</span> <span class="toc-text">1）基本内容</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2）现实合理性"><span class="toc-number">3.1.2.</span> <span class="toc-text">2）现实合理性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3）空想性"><span class="toc-number">3.1.3.</span> <span class="toc-text">3）空想性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4）后期问题"><span class="toc-number">3.1.4.</span> <span class="toc-text">4）后期问题</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-《资政新篇》【重要】（资本主义色彩-）"><span class="toc-number">3.2.</span> <span class="toc-text">2.《资政新篇》【重要】（资本主义色彩 ）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1）提出"><span class="toc-number">3.2.1.</span> <span class="toc-text">1）提出</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2）主要内容"><span class="toc-number">3.2.2.</span> <span class="toc-text">2）主要内容</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#政治"><span class="toc-number">3.2.2.1.</span> <span class="toc-text">政治</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#经济"><span class="toc-number">3.2.2.2.</span> <span class="toc-text">经济</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#文化"><span class="toc-number">3.2.2.3.</span> <span class="toc-text">文化</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#外交"><span class="toc-number">3.2.2.4.</span> <span class="toc-text">外交</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3）评价"><span class="toc-number">3.2.3.</span> <span class="toc-text">3）评价</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-国际观念"><span class="toc-number">3.3.</span> <span class="toc-text">3.国际观念</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-太平天国的历史意义【重要】"><span class="toc-number">4.</span> <span class="toc-text">4.太平天国的历史意义【重要】</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-回应着中国近代历史的社会主题"><span class="toc-number">4.1.</span> <span class="toc-text">1.回应着中国近代历史的社会主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-开启了近代中国历史的革命模式"><span class="toc-number">4.2.</span> <span class="toc-text">2.开启了近代中国历史的革命模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-改变了晚清以降的历史格局"><span class="toc-number">4.3.</span> <span class="toc-text">3.改变了晚清以降的历史格局</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二、统治层的自救与自强"><span class="toc-number"></span> <span class="toc-text">二、统治层的自救与自强</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-洋务运动的背景"><span class="toc-number">1.</span> <span class="toc-text">1.洋务运动的背景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-洋务运动的启动"><span class="toc-number">2.</span> <span class="toc-text">2.洋务运动的启动</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#布新而不除旧，从边缘推进改革"><span class="toc-number">2.1.</span> <span class="toc-text">布新而不除旧，从边缘推进改革</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#中体西用，从器物方面学习西方【重要】"><span class="toc-number">2.2.</span> <span class="toc-text">中体西用，从器物方面学习西方【重要】</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-洋务运动的历史作用【重要】"><span class="toc-number">3.</span> <span class="toc-text">3.洋务运动的历史作用【重要】</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-启动了中国近代工业的历程（生产力方面）"><span class="toc-number">3.1.</span> <span class="toc-text">1.启动了中国近代工业的历程（生产力方面）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-促进了民族资本主义的发展"><span class="toc-number">3.2.</span> <span class="toc-text">2.促进了民族资本主义的发展</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1）"><span class="toc-number">3.2.1.</span> <span class="toc-text">1）</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#官办企业："><span class="toc-number">3.2.1.1.</span> <span class="toc-text">官办企业：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#官督商办（或官商合办）"><span class="toc-number">3.2.1.2.</span> <span class="toc-text">官督商办（或官商合办）</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2）买办与买办资产阶级"><span class="toc-number">3.2.2.</span> <span class="toc-text">2）买办与买办资产阶级</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3）民族资本主义企业"><span class="toc-number">3.2.3.</span> <span class="toc-text">3）民族资本主义企业</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-出现了近代文化教育事业"><span class="toc-number">3.3.</span> <span class="toc-text">3.出现了近代文化教育事业</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#新式学校"><span class="toc-number">3.3.0.1.</span> <span class="toc-text">新式学校</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#留学生"><span class="toc-number">3.3.0.2.</span> <span class="toc-text">留学生</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-带来了生活方式和社会风气的变化"><span class="toc-number">3.4.</span> <span class="toc-text">4.带来了生活方式和社会风气的变化</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-洋务运动的失败原因【重要】"><span class="toc-number">4.</span> <span class="toc-text">4.洋务运动的失败原因【重要】</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1）封建性"><span class="toc-number">4.1.</span> <span class="toc-text">1）封建性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2）腐朽性"><span class="toc-number">4.2.</span> <span class="toc-text">2）腐朽性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3）依赖性"><span class="toc-number">4.3.</span> <span class="toc-text">3）依赖性</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#三、士大夫的觉醒与变革"><span class="toc-number"></span> <span class="toc-text">三、士大夫的觉醒与变革</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-百日维新"><span class="toc-number">1.</span> <span class="toc-text">1.百日维新</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-维新变法的内容"><span class="toc-number">2.</span> <span class="toc-text">2.维新变法的内容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-维新变法运动的特点"><span class="toc-number">3.</span> <span class="toc-text">3.维新变法运动的特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-戊戌政变"><span class="toc-number">4.</span> <span class="toc-text">4.戊戌政变</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#维新变法运动的意义和教训如何？"><span class="toc-number">5.</span> <span class="toc-text">维新变法运动的意义和教训如何？</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#四、结语"><span class="toc-number"></span> <span class="toc-text">四、结语</span></a>
+    </div>
+    
+    <div class="back-top iconfont-archer">&#xe639;</div>
+    <div class="sidebar sidebar-hide">
+    <ul class="sidebar-tabs sidebar-tabs-active-0">
+        <li class="sidebar-tab-archives"><span class="iconfont-archer">&#xe67d;</span><span class="tab-name">Archive</span></li>
+        <li class="sidebar-tab-tags"><span class="iconfont-archer">&#xe61b;</span><span class="tab-name">Tag</span></li>
+        <li class="sidebar-tab-categories"><span class="iconfont-archer">&#xe666;</span><span class="tab-name">Cate</span></li>
+    </ul>
+    <div class="sidebar-content sidebar-content-show-archive">
+          <div class="sidebar-panel-archives">
+    <!-- 在ejs中将archive按照时间排序 -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 6 </div>
+    
+    <div class="post-archive">
+    
+    
+    
+    
+    <div class="archive-year"> 2018 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/20</span><a class="archive-post-title" href= "/2018/04/20/lesson6/" >[Untitled Post]</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/04/16/hello-world/" >Hello World</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/04/20/lesson5/" >[Untitled Post]</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> 2018 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/20</span><a class="archive-post-title" href= "/2018/04/20/lesson1-introduction/" >[Untitled Post]</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/20</span><a class="archive-post-title" href= "/2018/04/20/lesson4/" >[Untitled Post]</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/20</span><a class="archive-post-title" href= "/2018/04/20/lesson3/" >[Untitled Post]</a>
+        </li>
+    
+    </div>
+  </div>
+        <div class="sidebar-panel-tags">
+    <div class="sidebar-tags-name">
+    
+    </div>
+    <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
+    <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
+    缺失模块。<br/>
+    1、请确保node版本大于6.2<br/>
+    2、在博客根目录（注意不是archer根目录）执行以下命令：<br/>
+    <span style="color: #f75357; font-size: 1rem; line-height: 2rem;">npm i hexo-generator-json-content --save</span><br/>
+    3、在根目录_config.yml里添加配置：
+    <pre style="color: #787878; font-size: 0.6rem;">
+jsonContent:
+  meta: false
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: false
+    raw: false
+    content: false
+    slug: false
+    updated: false
+    comments: false
+    link: false
+    permalink: false
+    excerpt: false
+    categories: true
+    tags: true</pre>
+    </div> 
+    <div class="sidebar-tags-list"></div>
+</div>
+        <div class="sidebar-panel-categories">
+    <div class="sidebar-categories-name">
+    
+    </div>
+    <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>
+    <div class="sidebar-categories-list"></div>
+</div>
+    </div>
+</div> 
+    <script>
+    var siteMeta = {
+        root: '/',
+        author: '郭书音'
+    }
+</script>
+    <!-- busuanzi  -->
+    
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+    <!-- CNZZ  -->
+    
+    </div>
+    <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
+    
+    </body>
+</html>
+
+
