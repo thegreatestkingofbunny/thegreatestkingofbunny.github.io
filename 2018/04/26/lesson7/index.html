@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html>
+    <!-- title -->
+
+
+
+
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
+    <meta name="description" content="">
+    <title>第七讲 中国革命的新道路 · Guo Shuyin&#39;s Studio</title>
+    <style type="text/css">
+    @font-face {
+        font-family: 'Oswald-Regular';
+        src: url("/font/Oswald-Regular.ttf");
+    }
+
+    body {
+        margin: 0;
+    }
+
+    header,
+    footer,
+    .back-top,
+    .sidebar,
+    .container,
+    .site-intro-meta,
+    .toc-wrapper {
+        display: none;
+    }
+
+    .site-intro {
+        position: relative;
+        z-index: 3;
+        width: 100%;
+        /* height: 50vh; */
+        overflow: hidden;
+    }
+
+    .site-intro-placeholder {
+        position: absolute;
+        z-index: -2;
+        top: 0;
+        left: 0;
+        width: calc(100% + 300px);
+        height: 100%;
+        background: repeating-linear-gradient(-45deg, #444 0, #444 80px, #333 80px, #333 160px);
+        background-position: center center;
+        transform: translate3d(-226px, 0, 0);
+        animation: gradient-move 2.5s ease-out 0s 1;
+    }
+
+    @keyframes gradient-move {
+        0% {
+            transform: translate3d(-226px, 0, 0);
+        }
+        100% {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+</style>
+
+    <link rel="preload" href= /css/style.css?v=20180317 as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" type="text/css" href= /css/mobile.css?v=20180317 media="(max-width: 980px)"/>
+    
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        
+    <link rel="icon" href= /assets/favicon.ico>
+    <script>
+        (function (w) {
+            "use strict";
+            // rel=preload support test
+            if (!w.loadCSS) {
+                w.loadCSS = function () { };
+            }
+            // define on the loadCSS obj
+            var rp = loadCSS.relpreload = {};
+            // rel=preload feature support test
+            // runs once and returns a function for compat purposes
+            rp.support = (function () {
+                var ret;
+                try {
+                    ret = w.document.createElement("link").relList.supports("preload");
+                } catch (e) {
+                    ret = false;
+                }
+                return function () {
+                    return ret;
+                };
+            })();
+
+            // if preload isn't supported, get an asynchronous load by using a non-matching media attribute
+            // then change that media back to its intended value on load
+            rp.bindMediaToggle = function (link) {
+                // remember existing media attr for ultimate state, or default to 'all'
+                var finalMedia = link.media || "all";
+
+                function enableStylesheet() {
+                    link.media = finalMedia;
+                }
+
+                // bind load handlers to enable media
+                if (link.addEventListener) {
+                    link.addEventListener("load", enableStylesheet);
+                } else if (link.attachEvent) {
+                    link.attachEvent("onload", enableStylesheet);
+                }
+
+                // Set rel and non-applicable media type to start an async request
+                // note: timeout allows this to happen async to let rendering continue in IE
+                setTimeout(function () {
+                    link.rel = "stylesheet";
+                    link.media = "only x";
+                });
+                // also enable media after 3 seconds,
+                // which will catch very old browsers (android 2.x, old firefox) that don't support onload on link
+                setTimeout(enableStylesheet, 3000);
+            };
+
+            // loop through link elements in DOM
+            rp.poly = function () {
+                // double check this to prevent external calls from running
+                if (rp.support()) {
+                    return;
+                }
+                var links = w.document.getElementsByTagName("link");
+                for (var i = 0; i < links.length; i++) {
+                    var link = links[i];
+                    // qualify links to those with rel=preload and as=style attrs
+                    if (link.rel === "preload" && link.getAttribute("as") === "style" && !link.getAttribute("data-loadcss")) {
+                        // prevent rerunning on link
+                        link.setAttribute("data-loadcss", true);
+                        // bind listeners to toggle media back
+                        rp.bindMediaToggle(link);
+                    }
+                }
+            };
+
+            // if unsupported, run the polyfill
+            if (!rp.support()) {
+                // run once at least
+                rp.poly();
+
+                // rerun poly on an interval until onload
+                var run = w.setInterval(rp.poly, 500);
+                if (w.addEventListener) {
+                    w.addEventListener("load", function () {
+                        rp.poly();
+                        w.clearInterval(run);
+                    });
+                } else if (w.attachEvent) {
+                    w.attachEvent("onload", function () {
+                        rp.poly();
+                        w.clearInterval(run);
+                    });
+                }
+            }
+            // commonjs
+            if (typeof exports !== "undefined") {
+                exports.loadCSS = loadCSS;
+            }
+            else {
+                w.loadCSS = loadCSS;
+            }
+        }(typeof global !== "undefined" ? global : this));
+    </script>
+    <script src="//cdn.staticfile.org/jquery/3.2.1/jquery.min.js" defer></script>
+    <script src="/scripts/main.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" defer></script>
+    <!-- 百度统计  -->
+    
+    <!-- 谷歌统计  -->
+    
+</head>
+
+    
+        <body class="post-body">
+    
+    
+<header class="header">
+
+    <div class="read-progress"></div>
+    <div class="header-sidebar-menu">&#xe775;</div>
+    <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >Guo Shuyin&#39;s Studio.</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">第七讲 中国革命的新道路</a>
+            </div>
+    </div>
+    
+    <a class="home-link" href=/>Guo Shuyin's Studio.</a>
+</header>
+    <div class="wrapper">
+        <div class="site-intro" style=
+
+
+
+
+
+
+
+
+height:50vh;
+
+>
+    
+    <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
+            
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
+    <div class="site-intro-placeholder"></div>
+    <div class="site-intro-meta">
+        <!-- 标题  -->
+        <h1 class="intro-title">
+            <!-- 主页  -->
+            
+            第七讲 中国革命的新道路
+            <!-- 404 -->
+            
+        </h1>
+        <!-- 副标题 -->
+        <p class="intro-subtitle">
+            <!-- 主页副标题  -->
+            
+            
+            <!-- 404 -->
+            
+        </p>
+        <!-- 文章页meta -->
+        
+            <!-- 文章页标签  -->
+            
+                <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "中国近现代史纲要">中国近现代史纲要</a>
+    
+</div>
+            
+            <div class="post-intro-meta">
+                <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                <span class="post-intro-time">2018/04/26</span>
+                
+                <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                    <span class="iconfont-archer">&#xe602;</span>
+                    <span id="busuanzi_value_page_pv"></span>
+                </span>
+                
+                <span class="shareWrapper">
+                    <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                    <span class="shareText">Share</span>
+                    <ul class="shareList">
+                        <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                            <div class="share-qrcode"></div>
+                        </li>
+                        <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                        <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                        <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                        <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                    </ul>
+                </span>
+            </div>
+        
+    </div>
+</div>
+        <script>
+  // load webfont-loader async, and add callback function
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+  
+  // get user agent
+  var browser = {
+    versions: function () {
+      var u = window.navigator.userAgent;
+      return {
+        userAgent: u,
+        trident: u.indexOf('Trident') > -1, //IE内核
+        presto: u.indexOf('Presto') > -1, //opera内核
+        webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+        gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+        mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+        ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+        android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+        iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者安卓QQ浏览器
+        iPad: u.indexOf('iPad') > -1, //是否为iPad
+        webApp: u.indexOf('Safari') == -1, //是否为web应用程序，没有头部与底部
+        weixin: u.indexOf('MicroMessenger') == -1, //是否为微信浏览器
+        uc: u.indexOf('UCBrowser') > -1 //是否为android下的UC浏览器
+      };
+    }()
+  }
+  console.log("userAgent:" + browser.versions.userAgent);
+
+  // callback
+  function fontLoaded() {
+    console.log('font loaded');
+    if (document.getElementsByClassName('site-intro-meta')) {
+      document.getElementsByClassName('intro-title')[0].classList.add('intro-fade-in');
+      document.getElementsByClassName('intro-subtitle')[0].classList.add('intro-fade-in');
+      var postIntroTags = document.getElementsByClassName('post-intro-tags')[0],
+        postIntroMeat = document.getElementsByClassName('post-intro-meta')[0];
+      if (postIntroTags) {
+        postIntroTags.classList.add('post-fade-in');
+      }
+      if (postIntroMeat) {
+        postIntroMeat.classList.add('post-fade-in');
+      }
+    }
+  }
+
+  // UC不支持跨域，所以直接显示
+  function asyncCb(){
+    if (browser.versions.uc) {
+      console.log("UCBrowser");
+      fontLoaded();
+    } else {
+      WebFont.load({
+        custom: {
+          families: ['Oswald-Regular']
+        },
+        loading: function () {  //所有字体开始加载
+          // console.log('loading');
+        },
+        active: function () {  //所有字体已渲染
+          fontLoaded();
+        },
+        inactive: function () { //字体预加载失败，无效字体或浏览器不支持加载
+          console.log('inactive: timeout');
+          fontLoaded();
+        },
+        timeout: 5000 // Set the timeout to two seconds
+      });
+    }
+  }
+
+  async("https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js", asyncCb)
+</script>        
+        <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
+        <div class="container container-unloaded">
+            <main class="main post-page">
+    <article class="article-entry">
+        <h1 id="一、国共合作与国民革命"><a href="#一、国共合作与国民革命" class="headerlink" title="一、国共合作与国民革命"></a>一、国共合作与国民革命</h1><h2 id="1-中国工人运动的第一次高潮"><a href="#1-中国工人运动的第一次高潮" class="headerlink" title="1.中国工人运动的第一次高潮"></a>1.中国工人运动的第一次高潮</h2><h3 id="共产党发动工人革命"><a href="#共产党发动工人革命" class="headerlink" title="共产党发动工人革命"></a>共产党发动工人革命</h3><ul>
+<li><p>从1922年初至1923年初，全国罢工斗争达100多次，参加罢工的工人达30万人以上；</p>
+<blockquote>
+<p>1922.01，香港海员大罢工；</p>
+<p>1922.10，唐山开滦五矿工人大罢工；</p>
+<p>1922.09，安源路矿（<em>江西境内，但和湖南关系密切</em> ）工人（<em>17k</em> ）大罢工；</p>
+<p>1923.02，京汉铁路工人（<em>20k+</em> ）大罢工；“二七惨案”发生，罢工失败</p>
+</blockquote>
+</li>
+</ul>
+<p><em>效仿十月革命</em> </p>
+<h5 id="思考（失败原因）"><a href="#思考（失败原因）" class="headerlink" title="思考（失败原因）"></a>思考（失败原因）</h5><ul>
+<li>群众毫无民主权利，工人没有开展合法斗争的政治空间</li>
+<li>工人革命需要强大的<strong>武装</strong> 与<strong>后备军</strong> </li>
+</ul>
+<h3 id="国民党人的继续革命"><a href="#国民党人的继续革命" class="headerlink" title="国民党人的继续革命"></a>国民党人的继续革命</h3><ul>
+<li>1917年，以恢复《约法》为号召、国民党人（孙中山等）联合西南军阀（滇、桂、粤、黔、川、湘）在广州成立护法军政府</li>
+<li>1918（陆龙亭排挤）、1922年（广东军阀背叛）孙中山遭遇两次挫折</li>
+</ul>
+<h5 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h5><ul>
+<li><p>国民党需要改组（党力有限）（<em>沙俄建议模仿共产党</em> ）</p>
+<blockquote>
+<p>“党与党员，不能收以身使臂”</p>
+<p>“改造国民党为‘有主义、有组织、有训练’的政治团体。”——《介绍&lt;国民党改组宣言&gt;》</p>
+</blockquote>
+</li>
+<li><p>军阀无论新旧，都不是革命的盟友</p>
+</li>
+<li><p>发动工农群众，方可取得革命成功（<em>共产党最适合</em> ）</p>
+</li>
+</ul>
+<h2 id="2-国共合作的形成"><a href="#2-国共合作的形成" class="headerlink" title="2.国共合作的形成"></a>2.国共合作的形成</h2><h3 id="国民党“一大”的召开"><a href="#国民党“一大”的召开" class="headerlink" title="国民党“一大”的召开"></a>国民党“一大”的召开</h3><ul>
+<li>1924年1月，国民党第一次全国代表大会在广州召开，这次大会，标志着第一次国共合作正式形成</li>
+<li>国共第一次合作掀起了一次革命浪潮，历史上成为“国民革命”或者“大革命”</li>
+</ul>
+<h2 id="3-革命新局面的开创"><a href="#3-革命新局面的开创" class="headerlink" title="3.革命新局面的开创"></a>3.革命新局面的开创</h2><h3 id="国民党的新变化"><a href="#国民党的新变化" class="headerlink" title="国民党的新变化"></a>国民党的新变化</h3><ul>
+<li>国民党建立了县、市、区级地方组织</li>
+<li>国民党党员认属增长迅速（从一大5万到二大21万到60万）</li>
+<li>国民党基本成为工人、农民、城市小资产阶级和民族资产阶级的联盟</li>
+</ul>
+<h3 id="革命军队的建立"><a href="#革命军队的建立" class="headerlink" title="革命军队的建立"></a>革命军队的建立</h3><ul>
+<li>国共合作创建的黄埔军校吸引着进步青年（<em>新式武装</em> ）</li>
+<li>黄埔军校为革命准备军事人才</li>
+<li>是中国共产党从事军事活动的开始</li>
+</ul>
+<h2 id="3-革命新局面的开创-1"><a href="#3-革命新局面的开创-1" class="headerlink" title="3.革命新局面的开创"></a>3.革命新局面的开创</h2><h3 id="北伐战争的的推进"><a href="#北伐战争的的推进" class="headerlink" title="北伐战争的的推进"></a>北伐战争的的推进</h3><ul>
+<li>1926年7，国民革命军在广州誓师北伐</li>
+<li>1926年7至1927年上半年，革命势力由两广发展到长江流域和黄河流域的大部分地区</li>
+</ul>
+<h3 id="工农运动的兴起"><a href="#工农运动的兴起" class="headerlink" title="工农运动的兴起"></a>工农运动的兴起</h3><blockquote>
+<p>“这次革命的成功，完全是工农群众的力量，并不是兵士的力量。我们在北伐的时候，在衡阳，在醴陵，在粤汉路，都得着农工运动的帮助，才得很顺利的杀却敌人。”——唐生智《唐总指挥在长沙对工农之重要讲话》</p>
+</blockquote>
+<ul>
+<li><p>各地农民协会纷纷成立，湖南的农会会员达200万（一般为家长，所以可带动1000万农民）</p>
+</li>
+<li><p>受到一定民主训练的农民，围着自己的权益参与到政治斗争之中</p>
+</li>
+<li><p>农村出现了社会大变动</p>
+<p>​</p>
+</li>
+<li><p>城市工人群众组织起来。1926年冬，湖北成立全省总工会，代表80多个工会组织、10多万工会会员</p>
+</li>
+<li><p>汉口“一三”惨案之后，群众反英行动成功地促成汉口、九江英租界地收回</p>
+</li>
+</ul>
+<p><strong>国共两党联合推进地这场革命，几乎动员了同封建势力对立地全体国民的参与，是一次广泛深刻的群众运动，即：“国民革命”</strong> </p>
+<p><strong>工农运动为未来中国共产党的革命准备了重要条件</strong> </p>
+<h2 id="4-国民革命的失败"><a href="#4-国民革命的失败" class="headerlink" title="4.国民革命的失败"></a>4.国民革命的失败</h2><h3 id="“四·一二”反革命政变"><a href="#“四·一二”反革命政变" class="headerlink" title="“四·一二”反革命政变"></a>“四·一二”反革命政变</h3><ul>
+<li>1927年4.12之后，蒋介石宣布“清党”，开始逮捕、屠杀共产党人。仅上海一地，由300多名共产党被杀，500多人被捕，5000多人下落不明。</li>
+<li>广州、武汉等地也发生屠杀共产党、进步人士的事件。</li>
+</ul>
+<h3 id="国民党的蜕变"><a href="#国民党的蜕变" class="headerlink" title="国民党的蜕变"></a>国民党的蜕变</h3><ul>
+<li>“清党”使国民党<strong>成分</strong>发生变化：党内有信仰、有理想、有革命热情的党员遭到清洗，造成党力下降（下降至22万人）（<em>逆淘汰</em> ）</li>
+<li>国民党<strong>性质</strong>转变，其政策不再代表广大工农利益（<em>农村不再继续改革，反而退步</em> ）（<em>资本家扶植新政权，不再代表工人利益</em> ）</li>
+<li>由曾经<strong>具有相当广泛群众基础的革命党</strong>，转变为一个<strong>以官僚政客为主体</strong> 的执政党</li>
+</ul>
+<p><strong>第一次国共合作破裂；大革命失败了</strong> </p>
+<ul>
+<li>1927年8.7，中共中央在汉口举行紧急会议，即“八七会议”，会议确定了实行<strong>土地革命</strong> 和<strong>武装反抗</strong> 国民党反对统治的总方针。</li>
+<li>“须知政权是由枪杆子中取得的”</li>
+</ul>
+<h3 id="发动城市暴动"><a href="#发动城市暴动" class="headerlink" title="发动城市暴动"></a>发动城市暴动</h3><h2 id="2-革命力量向农村转移"><a href="#2-革命力量向农村转移" class="headerlink" title="2.革命力量向农村转移"></a>2.革命力量向农村转移</h2><h3 id="革命实践中，城市暴动余部都转移到农村，革命力量向农村的转移成为必然"><a href="#革命实践中，城市暴动余部都转移到农村，革命力量向农村的转移成为必然" class="headerlink" title="革命实践中，城市暴动余部都转移到农村，革命力量向农村的转移成为必然"></a>革命实践中，城市暴动余部都转移到农村，革命力量向农村的转移成为必然</h3><ul>
+<li>1927.8，南昌起义→广东海陆丰→湘赣边界井冈山</li>
+<li>1927.9，秋收起义→湘赣边界井冈山</li>
+<li>1927.12，广州起义→海陆丰、井冈山、广西左右江地区</li>
+<li>共产党人同期在海陆丰、琼崖、赣西南、赣东北、湘南、湘鄂西、鄂豫边、闽西、广西左右江等地组织起义；爆发于数生边界的起义为革命火种。</li>
+</ul>
+<h3 id="“红旗到底打多久？”"><a href="#“红旗到底打多久？”" class="headerlink" title="“红旗到底打多久？”"></a>“红旗到底打多久？”</h3><ul>
+<li>在《中国的红色政权为什么能够存在？》《井冈山的斗争》等文章中，毛泽东分析中国国情和中国国革命的特殊性</li>
+</ul>
+<h5 id="经济不平衡"><a href="#经济不平衡" class="headerlink" title="经济不平衡"></a>经济不平衡</h5><ul>
+<li>城市与农村之间没有有效的联系</li>
+<li>农村处于自给自足的自然经济状态</li>
+<li>这为武装割据提供物质基础</li>
+</ul>
+<h5 id="政治不平衡"><a href="#政治不平衡" class="headerlink" title="政治不平衡"></a>政治不平衡</h5><ul>
+<li>封建统治常常无法触及农村底层</li>
+<li>军阀统治之间的缝隙是统治薄弱地区</li>
+<li>这是革命力量坚持和发展的空间</li>
+</ul>
+<h2 id="3-中国革命新道路的探索"><a href="#3-中国革命新道路的探索" class="headerlink" title="3.中国革命新道路的探索"></a>3.中国革命新道路的探索</h2><h3 id="建立新型军队"><a href="#建立新型军队" class="headerlink" title="建立新型军队"></a>建立新型军队</h3><ul>
+<li>红军成分：工人农民；游民无产者；国民党俘虏</li>
+</ul>
+<h5 id="三湾改编"><a href="#三湾改编" class="headerlink" title="三湾改编"></a>三湾改编</h5><ul>
+<li>通过政治教育，唤醒士兵的觉悟</li>
+<li>实行民主制度，主张官兵平等</li>
+<li>改善军民关系，工农革命军得到群众的支持拥护</li>
+</ul>
+<p>井冈山时期，整编军队为中国工农革命军第四军，后改名为工农红军第四军</p>
+<h3 id="加强基层党的组织"><a href="#加强基层党的组织" class="headerlink" title="加强基层党的组织"></a>加强基层党的组织</h3><ul>
+<li>恢复地方党的组织，使基层党组织成为团结群众的核心</li>
+<li>加强党对军队的领导，三湾改编的内容之一使支部建在连上，实现党指挥枪。</li>
+</ul>
+<h5 id="古田会议"><a href="#古田会议" class="headerlink" title="古田会议"></a>古田会议</h5><ul>
+<li>主题：如何将农民为主要成分的军队建设成为无产阶级领导的新型人民军队</li>
+<li>确立了党对于红军实行绝对领导的原则</li>
+<li>规定了红军中政治机关，政治工作的重要地位</li>
+</ul>
+<h3 id="发动土地革命"><a href="#发动土地革命" class="headerlink" title="发动土地革命"></a>发动土地革命</h3><ul>
+<li><strong>武装斗争</strong> 想要真正得到农民之职，关键在于<strong>土地革命</strong> </li>
+</ul>
+<h5 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h5><ul>
+<li>利用革命手段、打土豪、分田地</li>
+<li>颁布土地法</li>
+</ul>
+<h5 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h5><ul>
+<li>变<strong>封建地主土地私有制</strong> ，为<strong>农民土地私有制</strong> </li>
+<li>使农民在政治上得翻身、农村生产力得到解放</li>
+</ul>
+<p><strong>土地革命带来一场规模空前的农村社会大变动</strong> </p>
+<h3 id="建设革命根据地"><a href="#建设革命根据地" class="headerlink" title="建设革命根据地"></a>建设革命根据地</h3><ul>
+<li><p>到1930年，各地建设起来大小15块革命根据地，中央苏区（赣南、闽西）使全国最大的根据地</p>
+<blockquote>
+<ul>
+<li>每个根据地都有一定数量的红军</li>
+<li>土地革命之后，根据地尝试以政治、经济、文化、教育各方面建设新政权</li>
+<li>1931年，中华苏维埃共和国成立，毛泽东任主席</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<p>在领导红军和根据地建设的实践中，毛泽东等人把马克思主义的理论同中国的实际相结合，创造性地提出了<strong>农村包围城市、武装夺取争政权</strong> 的理论</p>
+<h3 id="如何理解中国革命新道路的基本内容和特点？【重要】"><a href="#如何理解中国革命新道路的基本内容和特点？【重要】" class="headerlink" title="如何理解中国革命新道路的基本内容和特点？【重要】"></a>如何理解中国革命新道路的基本内容和特点？【重要】</h3><p><img src="https://raw.githubusercontent.com/thegreatestkingofbunny/photo/master/lesson7.jpg" alt=""></p>
+<h1 id="三、中国革命性的转折"><a href="#三、中国革命性的转折" class="headerlink" title="三、中国革命性的转折"></a>三、中国革命性的转折</h1><h2 id="1-土地革命时期党内三次“左倾”错误"><a href="#1-土地革命时期党内三次“左倾”错误" class="headerlink" title="1.土地革命时期党内三次“左倾”错误"></a>1.土地革命时期党内三次“左倾”错误</h2><ul>
+<li>瞿秋白为代表的“左”倾盲动主义（1927.11-1928.4）</li>
+<li>李立三为代表的“左”倾冒险主义（1930.6-1930.9）</li>
+<li>王明为代表的“左”倾教条主义（1931.1-1935.1）</li>
+</ul>
+<p>马克思主义理论储备不足</p>
+<p>对于中国革命、中国国情的认识不够</p>
+<p>党内存在急于求成的心态</p>
+<h2 id="2-中国革命的历史性转折"><a href="#2-中国革命的历史性转折" class="headerlink" title="2.中国革命的历史性转折"></a>2.中国革命的历史性转折</h2><h3 id="红军长征与中国革命的转折"><a href="#红军长征与中国革命的转折" class="headerlink" title="红军长征与中国革命的转折"></a>红军长征与中国革命的转折</h3><ul>
+<li>1933年初，中共临时中央政治局被迫迁到中央根据地，“左”倾错误在中央苏区造成严重危害，直接导致第五次反“围剿”的失败；</li>
+<li>1934年10月，中共中央机关和中央红军8.6万人撤离苏区，开始长征；其他根据地红军也先后开始长征；</li>
+<li>1935年10月，红军三大主力长征胜利结束</li>
+<li><strong>长征一结束，中国革命的新局面就开始了</strong> </li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/thegreatestkingofbunny/photo/master/lesson7%EF%BC%882%EF%BC%89.jpg" alt=""></p>
+<h1 id="四、结语"><a href="#四、结语" class="headerlink" title="四、结语"></a>四、结语</h1><ul>
+<li>国共合作，共同发动的国民革命失败之后，中国共产党遭遇革命你低潮</li>
+<li>在曲折探索中，以毛泽东为代表的中国共产党人，把马克思主义与中国实际相结合，初步探索出一条中国特色的革命道路</li>
+<li>经历挫折的中国革命即将迎来新的局面</li>
+</ul>
+
+    </article>
+    <!-- 前后页  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2018/04/19/lesson6/" title= 第六讲 马克思主义传播与中国共产党诞生 >
+                    <div class="prevTitle">第六讲 马克思主义传播与中国共产党诞生</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
+    
+    
+    <!--PC版-->
+
+    <!--PC版-->
+
+
+    
+    <!-- 评论 -->
+</main>
+            <!-- profile -->
+            
+        </div>
+        <footer class="footer footer-unloaded">
+    <!-- social  -->
+    
+    <div class="social">
+        
+    
+        
+            
+                <a href="mailto:guoshuyin123@gmail.com" class="iconfont-archer email" title=email ></a>
+            
+        
+    
+        
+            
+                <a href="//github.com/thegreatestkingofbunny" class="iconfont-archer github" target="_blank" title=github></a>
+            
+        
+    
+        
+            
+                <span class="iconfont-archer wechat" title=wechat>
+                  
+                  <img class="profile-qr" src="/assets/wechat.jpg" />
+                </span>
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+    </div>
+    
+    <!-- powered by Hexo  -->
+    <div class="copyright">
+        <span id="hexo-power">Powered by <a href="https://hexo.io/" target="_blank">Hexo</a></span><span class="iconfont-archer power">&#xe635;</span><span id="theme-info">theme <a href="https://github.com/fi3ework/hexo-theme-archer" target="_blank">Archer</a></span>
+    </div>
+    <!-- 不蒜子  -->
+    
+    <div class="busuanzi-container">
+        <span id="busuanzi_container_site_pv">PV: <span id="busuanzi_value_site_pv"></span>
+        </span>
+    </div>
+    
+</footer>
+    </div>
+    <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一、国共合作与国民革命"><span class="toc-number">1.</span> <span class="toc-text">一、国共合作与国民革命</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-中国工人运动的第一次高潮"><span class="toc-number">1.1.</span> <span class="toc-text">1.中国工人运动的第一次高潮</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#共产党发动工人革命"><span class="toc-number">1.1.1.</span> <span class="toc-text">共产党发动工人革命</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#思考（失败原因）"><span class="toc-number">1.1.1.0.1.</span> <span class="toc-text">思考（失败原因）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#国民党人的继续革命"><span class="toc-number">1.1.2.</span> <span class="toc-text">国民党人的继续革命</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#思考"><span class="toc-number">1.1.2.0.1.</span> <span class="toc-text">思考</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-国共合作的形成"><span class="toc-number">1.2.</span> <span class="toc-text">2.国共合作的形成</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#国民党“一大”的召开"><span class="toc-number">1.2.1.</span> <span class="toc-text">国民党“一大”的召开</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-革命新局面的开创"><span class="toc-number">1.3.</span> <span class="toc-text">3.革命新局面的开创</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#国民党的新变化"><span class="toc-number">1.3.1.</span> <span class="toc-text">国民党的新变化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#革命军队的建立"><span class="toc-number">1.3.2.</span> <span class="toc-text">革命军队的建立</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-革命新局面的开创-1"><span class="toc-number">1.4.</span> <span class="toc-text">3.革命新局面的开创</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#北伐战争的的推进"><span class="toc-number">1.4.1.</span> <span class="toc-text">北伐战争的的推进</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#工农运动的兴起"><span class="toc-number">1.4.2.</span> <span class="toc-text">工农运动的兴起</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-国民革命的失败"><span class="toc-number">1.5.</span> <span class="toc-text">4.国民革命的失败</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#“四·一二”反革命政变"><span class="toc-number">1.5.1.</span> <span class="toc-text">“四·一二”反革命政变</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#国民党的蜕变"><span class="toc-number">1.5.2.</span> <span class="toc-text">国民党的蜕变</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#发动城市暴动"><span class="toc-number">1.5.3.</span> <span class="toc-text">发动城市暴动</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-革命力量向农村转移"><span class="toc-number">1.6.</span> <span class="toc-text">2.革命力量向农村转移</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#革命实践中，城市暴动余部都转移到农村，革命力量向农村的转移成为必然"><span class="toc-number">1.6.1.</span> <span class="toc-text">革命实践中，城市暴动余部都转移到农村，革命力量向农村的转移成为必然</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#“红旗到底打多久？”"><span class="toc-number">1.6.2.</span> <span class="toc-text">“红旗到底打多久？”</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#经济不平衡"><span class="toc-number">1.6.2.0.1.</span> <span class="toc-text">经济不平衡</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#政治不平衡"><span class="toc-number">1.6.2.0.2.</span> <span class="toc-text">政治不平衡</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-中国革命新道路的探索"><span class="toc-number">1.7.</span> <span class="toc-text">3.中国革命新道路的探索</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#建立新型军队"><span class="toc-number">1.7.1.</span> <span class="toc-text">建立新型军队</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#三湾改编"><span class="toc-number">1.7.1.0.1.</span> <span class="toc-text">三湾改编</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#加强基层党的组织"><span class="toc-number">1.7.2.</span> <span class="toc-text">加强基层党的组织</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#古田会议"><span class="toc-number">1.7.2.0.1.</span> <span class="toc-text">古田会议</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#发动土地革命"><span class="toc-number">1.7.3.</span> <span class="toc-text">发动土地革命</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#内容"><span class="toc-number">1.7.3.0.1.</span> <span class="toc-text">内容</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#目标"><span class="toc-number">1.7.3.0.2.</span> <span class="toc-text">目标</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#建设革命根据地"><span class="toc-number">1.7.4.</span> <span class="toc-text">建设革命根据地</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#如何理解中国革命新道路的基本内容和特点？【重要】"><span class="toc-number">1.7.5.</span> <span class="toc-text">如何理解中国革命新道路的基本内容和特点？【重要】</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#三、中国革命性的转折"><span class="toc-number">2.</span> <span class="toc-text">三、中国革命性的转折</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-土地革命时期党内三次“左倾”错误"><span class="toc-number">2.1.</span> <span class="toc-text">1.土地革命时期党内三次“左倾”错误</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-中国革命的历史性转折"><span class="toc-number">2.2.</span> <span class="toc-text">2.中国革命的历史性转折</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#红军长征与中国革命的转折"><span class="toc-number">2.2.1.</span> <span class="toc-text">红军长征与中国革命的转折</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#四、结语"><span class="toc-number">3.</span> <span class="toc-text">四、结语</span></a></li></ol>
+    </div>
+    
+    <div class="back-top iconfont-archer">&#xe639;</div>
+    <div class="sidebar sidebar-hide">
+    <ul class="sidebar-tabs sidebar-tabs-active-0">
+        <li class="sidebar-tab-archives"><span class="iconfont-archer">&#xe67d;</span><span class="tab-name">Archive</span></li>
+        <li class="sidebar-tab-tags"><span class="iconfont-archer">&#xe61b;</span><span class="tab-name">Tag</span></li>
+        <li class="sidebar-tab-categories"><span class="iconfont-archer">&#xe666;</span><span class="tab-name">Cate</span></li>
+    </ul>
+    <div class="sidebar-content sidebar-content-show-archive">
+          <div class="sidebar-panel-archives">
+    <!-- 在ejs中将archive按照时间排序 -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 6 </div>
+    
+    <div class="post-archive">
+    
+    
+    
+    
+    <div class="archive-year"> 2018 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/26</span><a class="archive-post-title" href= "/2018/04/26/lesson7/" >第七讲 中国革命的新道路</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/19</span><a class="archive-post-title" href= "/2018/04/19/lesson6/" >第六讲 马克思主义传播与中国共产党诞生</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/12</span><a class="archive-post-title" href= "/2018/04/12/lesson5/" >第五讲 民国初年的政治</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/22</span><a class="archive-post-title" href= "/2018/03/22/lesson4/" >第四讲 辛亥革命与民国建立</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/15</span><a class="archive-post-title" href= "/2018/03/15/lesson3/" >第三讲 对国家出路的早期探索</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/01</span><a class="archive-post-title" href= "/2018/03/01/lesson1-introduction/" >第一讲 导言</a>
+        </li>
+    
+    </div>
+  </div>
+        <div class="sidebar-panel-tags">
+    <div class="sidebar-tags-name">
+    
+        <span class="sidebar-tag-name" data-tags="中国近现代史纲要"><span class="iconfont-archer">&#xe606;</span>中国近现代史纲要</span>
+    
+    </div>
+    <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
+    <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
+    缺失模块。<br/>
+    1、请确保node版本大于6.2<br/>
+    2、在博客根目录（注意不是archer根目录）执行以下命令：<br/>
+    <span style="color: #f75357; font-size: 1rem; line-height: 2rem;">npm i hexo-generator-json-content --save</span><br/>
+    3、在根目录_config.yml里添加配置：
+    <pre style="color: #787878; font-size: 0.6rem;">
+jsonContent:
+  meta: false
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: false
+    raw: false
+    content: false
+    slug: false
+    updated: false
+    comments: false
+    link: false
+    permalink: false
+    excerpt: false
+    categories: true
+    tags: true</pre>
+    </div> 
+    <div class="sidebar-tags-list"></div>
+</div>
+        <div class="sidebar-panel-categories">
+    <div class="sidebar-categories-name">
+    
+    </div>
+    <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>
+    <div class="sidebar-categories-list"></div>
+</div>
+    </div>
+</div> 
+    <script>
+    var siteMeta = {
+        root: '/',
+        author: '郭书音'
+    }
+</script>
+    <!-- busuanzi  -->
+    
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+    <!-- CNZZ  -->
+    
+    </div>
+    <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
+    
+    </body>
+</html>
+
+
